@@ -44,8 +44,18 @@ table {
 
 /*_______________HEADER_____________*/
 
+/*Koleto: Collapsable Add income and Add Expense forms*/
+#showCategoriesExpense,
+#showCategoriesIncome { width: 90%; }
 
+#addIncome,
+#addExpense,
+#showCategoriesExpense,
+#showCategoriesIncome,
+#showCallendarIncome,
+#showCallendarExpense { padding-left: 1%; }
 
+/*Koleto: End of Collapsable Add income and Add Expense forms*/
 
 
 /*_________________MAIN______________*/
@@ -59,7 +69,28 @@ table {
 
 
 /*---------->Qick View Section <----------*/
+/* navigation */
+.dropdown-submenu {
+    position: relative;
+}
 
+#showBtn {
+    color: black;
+}
+
+/* callendar */
+#today {
+    color: #9E9999;
+    background-color: #1F1C1C;
+}
+.mutedDays {
+    color: #A3A3A3;
+}
+.weekDays {
+    color: #9E9999;
+    background-color: #1F1C1C;
+}
+/*---------->Qick View Section <----------*/
 
 
 
