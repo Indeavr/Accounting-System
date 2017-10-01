@@ -63,7 +63,40 @@ table {
 
 
 /*----------> Main Section <-----------*/
+.budget-progressbar{
+    height: 40px;
+    margin: 10px;
+}
 
+progress {
+    height: 40px;
+    width: 400px;
+    background-color: mediumspringgreen;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: mediumspringgreen;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    }
+progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: #cc0000;
+}
+.showBudgetButton{
+    height: 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: 15px;
+}
+
+#piechart{
+    width: 550px;
+    height: 400px;
+    
+}
 
 
 
