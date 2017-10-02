@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Accounting System</title>
     <link rel="stylesheet" href="main.css">
-      <!-- Bootstrapping -->
+    <!-- Bootstrapping -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <header>
@@ -19,144 +19,251 @@
     </h2>
     <!-- Koleto: Beginning of Navigational menu -->
     <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="#">Logo</a>
-      </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#" data-toggle="collapse" data-target="#addIncome">Add income</a></li>
-        <li><a href="#" data-toggle="collapse" data-target="#addExpense">Add expense</a></li>
-      </ul>   
-    </div>
-    </div>
-  </nav>
-<!-- Koleto: End of Navigational menu -->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" data-toggle="collapse" data-target="#addIncome">Add income</a></li>
+                    <li><a href="#" data-toggle="collapse" data-target="#addExpense">Add expense</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Koleto: End of Navigational menu -->
 </header>
 <main>
 
-<!-- Koleto: Collapsable Add income and Add Expense forms -->
-<form id="addIncome" class="collapse form-group">
-    
-  <div>
-    <label>Add income fill form</label>
-  </div>
-    
-  <div>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCallendarIncome">
-      Select Date (<span id="selectDateIncome">default: Today</span>)<span class="caret"></span>
-    </button>
-    <div class="collapse" id="showCallendarIncome">
-      <a href="">Callendar to select from</a>
-    </div>    
-  </div>
-            
-  <div>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCategoriesIncome">
-      Select category (<span id="selectIncome">default: Miscellaneous</span>)<span class="caret"></span>
-    </button>
-    <div class="collapse" id="showCategoriesIncome">
-      
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Taxes</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Housing</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Food</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Automobile</label></div>
-      </div>
+    <form id="setBudgetForm" class="form-group">
+        <h2>
+            Set Budget
+        </h2>
+        <div class="form-inline">
+            <label id="salary">
+                Salary:
+            </label>
+            <input type="text" name="salary-budget" class="form-control" placeholder="Specify your montly salary $">
+        </div>
+        <div class="form-inline">
+            <label id="payday">
+                Payday:
+            </label>
+            <input type="date" name="payday-budget" class="form-control" placeholder="Specify your montly salary $">
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#add-known-expense">
+            Add Known Expense
+        </button>
+        <div  class="collapse" id="add-known-expense">
+            <form id="addExpense-budget" class="collapse form-group" aria-expanded="true" style="">
 
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Insurance</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Debt Repayment</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Entertainment and Recreation</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Clothing</label></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Savings</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Medical/Dental</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Miscellaneous</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">School/Childcare</label></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Investments</label></div>
-        <div class="col-xs-9"><textarea class="form-control" rows="1" id="otherIncomeCategory" placeholder="Other category:"></textarea></div>
-      </div>
-    </div>
-  </div> 
-    
-  <input type="money" class="form-control" id="addMoney" placeholder="Specify amonth of income in $">
-    
-  <textarea class="form-control" rows="2" cols="50" id="addMoneyNote" placeholder="Short note:"></textarea>
-    
-  <button type="submit" class="btn btn-default" id="submitIncome">Submit income</button>
+                <div>
+                    <label>Add expense fill form</label>
+                </div>
 
-</form>
+                <div>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCallendarExpense">
+                        Select Date (<span id="selectDateExpense-budget">default: Today</span>)<span class="caret"></span>
+                    </button>
+                    <div class="collapse" id="showCallendarExpense-budget">
+                        <a href="">Callendar to select from</a>
+                    </div>
+                </div>
 
-<form id="addExpense" class="collapse form-group">
-    
-  <div>
-    <label>Add expense fill form</label>
-  </div>
-    
-  <div>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCallendarExpense">
-      Select Date (<span id="selectDateExpense">default: Today</span>)<span class="caret"></span>
-    </button>
-    <div class="collapse" id="showCallendarExpense">
-      <a href="">Callendar to select from</a>
-    </div>    
-  </div>
-            
-  <div>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCategoriesExpense">
-      Select category (<span id="selectIncome">default: Miscellaneous</span>)<span class="caret"></span>
-    </button>
-    <div class="collapse" id="showCategoriesExpense">
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Taxes</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Housing</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Food</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Automobile</label></div>
-      </div>
+                <div>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCategoriesExpense">
+                        Select category (<span id="selectIncome-budget">default: Miscellaneous</span>)<span class="caret"></span>
+                    </button>
+                    <div class="collapse" id="showCategoriesExpense-budget">
+                        <div class="row">
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Taxes</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Housing</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Food</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Automobile</label></div>
+                        </div>
 
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Insurance</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Debt Repayment</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Entertainment and Recreation</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Clothing</label></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Savings</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Medical/Dental</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Miscellaneous</label></div>
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">School/Childcare</label></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Investments</label></div>
-        <div class="col-xs-9"><textarea class="form-control" rows="1" id="otherExpenseCategory" placeholder="Other category:"></textarea></div>
-      </div>
-    </div>
-  </div> 
-    
-  <input type="money" class="form-control" id="subtractMoney" placeholder="Specify amonth of expense in $">
-    
-  <textarea class="form-control" rows="2" cols="50" id="subtractMoneyNote" placeholder="Short note:"></textarea>
-    
-  <button type="submit" class="btn btn-default" id="submitExpense">Submit expense</button>
+                        <div class="row">
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Insurance</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Debt Repayment</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Entertainment and Recreation</label>
+                            </div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Clothing</label></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Savings</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Medical/Dental</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Miscellaneous</label></div>
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">School/Childcare</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Investments</label></div>
+                            <div class="col-xs-9"><textarea class="form-control" rows="1" id="otherExpenseCategory-budget" placeholder="Other category:"></textarea></div>
+                        </div>
+                    </div>
+                </div>
 
-</form>
+                <input type="money" class="form-control" id="subtractMoney-budget" placeholder="Specify amonth of expense in $">
 
-  <!-- Koleto: End of Collapsable Add income and Add Expense forms -->
+                <textarea class="form-control" rows="2" cols="50" id="subtractMoneyNote-budget" placeholder="Short note:"></textarea>
+
+                <button type="submit" class="btn btn-default" id="submitExpense-budget">Submit expense</button>
+
+            </form>
+        </div>
+        <!---->
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#savings-form">
+                Add Savings Goal
+            </button>
+            <form id="savings-form" class="collapse form-group">
+                <div>
+                    <label>
+                        Value:
+                    </label>
+                    <input type="text" class="form-control" id="savings-form-money">
+                </div>
+                <div>
+                    <label>
+                        Description:
+                    </label>
+                    <textarea class="form-control" rows="2" cols="50" id="savings-form-note" placeholder="Short note:"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default" id="submit-savings">Submit savings</button>
+            </form>
+        </div>
+    </form>
+
+
+
+    <!-- Koleto: Collapsable Add income and Add Expense forms -->
+    <form id="addIncome" class="collapse form-group">
+
+        <div>
+            <label>Add income fill form</label>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCallendarIncome">
+                Select Date (<span id="selectDateIncome">default: Today</span>)<span class="caret"></span>
+            </button>
+            <div class="collapse" id="showCallendarIncome">
+                <a href="">Callendar to select from</a>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCategoriesIncome">
+                Select category (<span id="selectIncome">default: Miscellaneous</span>)<span class="caret"></span>
+            </button>
+            <div class="collapse" id="showCategoriesIncome">
+
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Taxes</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Housing</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Food</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Automobile</label></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Insurance</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Debt Repayment</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Entertainment and Recreation</label>
+                    </div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Clothing</label></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Savings</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Medical/Dental</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Miscellaneous</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">School/Childcare</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Investments</label></div>
+                    <div class="col-xs-9"><textarea class="form-control" rows="1" id="otherIncomeCategory"
+                                                    placeholder="Other category:"></textarea></div>
+                </div>
+            </div>
+        </div>
+
+        <input type="money" class="form-control" id="addMoney" placeholder="Specify amonth of income in $">
+
+        <textarea class="form-control" rows="2" cols="50" id="addMoneyNote" placeholder="Short note:"></textarea>
+
+        <button type="submit" class="btn btn-default" id="submitIncome">Submit income</button>
+
+    </form>
+
+    <form id="addExpense" class="collapse form-group">
+
+        <div>
+            <label>Add expense fill form</label>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCallendarExpense">
+                Select Date (<span id="selectDateExpense">default: Today</span>)<span class="caret"></span>
+            </button>
+            <div class="collapse" id="showCallendarExpense">
+                <a href="">Callendar to select from</a>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showCategoriesExpense">
+                Select category (<span id="selectIncome">default: Miscellaneous</span>)<span class="caret"></span>
+            </button>
+            <div class="collapse" id="showCategoriesExpense">
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Taxes</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Housing</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Food</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Automobile</label></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Insurance</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Debt Repayment</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Entertainment and Recreation</label>
+                    </div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Clothing</label></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Savings</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Medical/Dental</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Miscellaneous</label></div>
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">School/Childcare</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 radio"><label><input type="radio" name="optradio">Investments</label></div>
+                    <div class="col-xs-9"><textarea class="form-control" rows="1" id="otherExpenseCategory"
+                                                    placeholder="Other category:"></textarea></div>
+                </div>
+            </div>
+        </div>
+
+        <input type="money" class="form-control" id="subtractMoney" placeholder="Specify amonth of expense in $">
+
+        <textarea class="form-control" rows="2" cols="50" id="subtractMoneyNote" placeholder="Short note:"></textarea>
+
+        <button type="submit" class="btn btn-default" id="submitExpense">Submit expense</button>
+
+    </form>
+
+    <!-- Koleto: End of Collapsable Add income and Add Expense forms -->
 
     <div class="main-content">
         <div class="budget-section">
             <div class="budget-progressbar">
                 <progress id="progressbar" value="0" max="100"></progress>
-               <button class="showBudgetButton" onclick="showBudget()">Calculate budget</button>
+                <button class="showBudgetButton" onclick="showBudget()">Calculate budget</button>
             </div>
             <div class="budget-savingsbar">
 
@@ -169,7 +276,7 @@
             <div class="report-graphsection">
                 <div id="piechart"></div>
                 <div id="barchart"></div>
-                
+
             </div>
         </div>
     </div>
@@ -179,103 +286,141 @@
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mySidebarNav">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="mySidebarNav">
-              <ul class="nav navbar-nav">
-                <li><button class="navbar-btn btn" id="callendarBtn">Callendar</button></li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">History<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown-submenu">
-                        <a class="submenuSwitch" data-toggle="dropdown" href="#">By category<span class="caret"></span></a>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <button class="navbar-btn btn" id="callendarBtn">Callendar</button>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">History<span
+                                class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">Taxes</a></li>
-                          <li><a href="">Housing</a></li>
-                          <li><a href="">Food</a></li>
-                          <li><a href="">Automobile</a></li>
-                          <li><a href="">Insurance</a></li>
-                          <li><a href="">Debt Repayment</a></li>
-                          <li><a href="">Entertainment and Recreation</a></li>
-                          <li><a href="">Clothing</a></li>
-                          <li><a href="">Savings</a></li>
-                          <li><a href="">Medical/Dental</a></li>
-                          <li><a href="">Miscellaneous</a></li>
-                          <li><a href="">School/Childcare</a></li>
-                          <li><a href="">Investments</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="submenuSwitch" data-toggle="dropdown" href="#">By category<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Taxes</a></li>
+                                    <li><a href="">Housing</a></li>
+                                    <li><a href="">Food</a></li>
+                                    <li><a href="">Automobile</a></li>
+                                    <li><a href="">Insurance</a></li>
+                                    <li><a href="">Debt Repayment</a></li>
+                                    <li><a href="">Entertainment and Recreation</a></li>
+                                    <li><a href="">Clothing</a></li>
+                                    <li><a href="">Savings</a></li>
+                                    <li><a href="">Medical/Dental</a></li>
+                                    <li><a href="">Miscellaneous</a></li>
+                                    <li><a href="">School/Childcare</a></li>
+                                    <li><a href="">Investments</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="submenuSwitch" data-toggle="dropdown" href="#">Date/Month/Year<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Date Form</a></li>
+                                    <li><a href="">Month Form</a></li>
+                                    <li><a href="">Year Form</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="submenuSwitch" data-toggle="dropdown" href="#">Range<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Form: form</a></li>
+                                    <li><a href="">To: form</a></li>
+                                    <li>
+                                        <button class="navbar-btn btn" id="showBtn">Show</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Full history</a>
+                            </li>
                         </ul>
-                      </li>
-                      <li class="dropdown-submenu">
-                          <a class="submenuSwitch" data-toggle="dropdown" href="#">Date/Month/Year<span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="">Date Form</a></li>
-                            <li><a href="">Month Form</a></li>
-                            <li><a href="">Year Form</a></li>
-                          </ul>
-                      </li>
-                      <li class="dropdown-submenu">
-                          <a class="submenuSwitch" data-toggle="dropdown" href="#">Range<span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="">Form: form</a></li>
-                            <li><a href="">To: form</a></li>
-                            <li><button class="navbar-btn btn" id="showBtn">Show</button></li>
-                          </ul>
-                      </li>
-                      <li class="dropdown-submenu">
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Full history</a>
-                      </li>
-                    </ul>
-                </li>
-              </ul>   
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
         <!-- Koleto: End of Sidepanel navigation -->
 
         <div class="quickview-container">
             <!-- Koleto: Beginning of callendar -->
             <div class="callendar">
-                    <table class="table-condensed table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                  <th colspan="7">
+                <table class="table-condensed table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th colspan="7">
                                     <span class="btn-group">
                                       <a class="btn"><i class="icon-chevron-left"></i></a>
                                       <a class="btn active" id="displayCallendarMonthYear">February 2012</a>
                                       <a class="btn"><i class="icon-chevron-right"></i></a>
                                     </span>
-                                  </th>
-                                </tr>
-                                <tr>
-                                    <th class="weekDays">Mo</th>
-                                    <th class="weekDays">Tu</th>
-                                    <th class="weekDays">We</th>
-                                    <th class="weekDays">Th</th>
-                                    <th class="weekDays">Fr</th>
-                                    <th class="weekDays">Sa</th>
-                                    <th class="weekDays">Su</th>
-                                </tr>
-                            </thead>
-                            <tbody id="daysInCallendar">
-                                <tr>
-                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                </tr>
-                                <tr>
-                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                </tr>
-                                <tr>
-                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                </tr>
-                                <tr>
-                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                </tr>
-                                <tr>
-                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                </tr>
-                            </tbody>
-                    </table>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="weekDays">Mo</th>
+                        <th class="weekDays">Tu</th>
+                        <th class="weekDays">We</th>
+                        <th class="weekDays">Th</th>
+                        <th class="weekDays">Fr</th>
+                        <th class="weekDays">Sa</th>
+                        <th class="weekDays">Su</th>
+                    </tr>
+                    </thead>
+                    <tbody id="daysInCallendar">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <!-- Koleto: End of callendar -->
             <div class="history">
