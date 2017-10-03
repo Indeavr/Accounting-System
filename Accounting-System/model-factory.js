@@ -37,7 +37,7 @@ function modelFactory() {
         // }
 
 
-        validator().validateBudget(type, category, amount, note)
+        //validator().validateBudget(type, category, amount, note)
 
         return {
             get salary() {
@@ -65,23 +65,24 @@ function modelFactory() {
 
     function createExpense() {
         let category,
-        amount,
-        date,
-        note;
-        
+            amount,
+            date,
+            note;
+
         $('#submitExpense').click(function () {
             category = $('input[optradio]:checked').text();
             amount = $('#subtractMoney').val();
             date = $('#selectDateExpense-budget').val();
             note = $('subtractMoneyNote-budget').val();
         })
-        
+
         let expense = {
-            category : category,
-            amount : amount,
-            date : date,
-            note : note
+            category: category,
+            amount: amount,
+            date: date,
+            note: note
         };
 
         return expense;
     }
+}
