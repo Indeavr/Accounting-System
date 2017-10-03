@@ -62,6 +62,29 @@ function modelFactory() {
         createSavingGoals,
         createBudget
     }
+
+    function createExpense() {
+        let category,
+        amount,
+        date,
+        note;
+        
+        $('#submitExpense').click(function () {
+            category = $('input[optradio]:checked').text();
+            amount = $('#subtractMoney').val();
+            date = $('#selectDateExpense-budget').val();
+            note = $('subtractMoneyNote-budget').val();
+        })
+        
+        let expense = {
+            category : category,
+            amount : amount,
+            date : date,
+            note : note
+        };
+
+        return expense;
+    }
 }
 
 
