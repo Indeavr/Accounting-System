@@ -1,26 +1,52 @@
 function validator() {
-    function ValidateKnownExpenses(type, category, amount, note) {
 
-        (function validateType(type) {
 
-        }());
+    function validateKnownExpenses(type, category, amount, note) {
 
-        (function validateCategory(category) {
+        function validateType(type) {
+            return
+        };
 
-        }());
+        function validateCategory(category) {
+            return
+        };
 
-        (function validateAmount(amount) {
-            if(typeof amount !== "number") {
+        function validateAmount(amount) {
 
-            }
-        }());
+            // $('#addExpense-budget').validate({
+            //     rules: {
+            //         note: {
+            //             required: true
+            //         },
+            //
+            //
+            //     },
+            //     messages: {
+            //         note: {
+            //             required: "To pole jest wymagane!"
+            //         }
+            //     }
+            // })
+            return
+        };
 
-        (function validateNote(note) {
+        function validateNote(note) {
+            return
+        };
 
-        }());
+        return {
+            validateType,
+            validateCategory,
+            validateAmount,
+            validateNote
+        }
     }
 
     function ValidateSavingGoals(savingGoalsInput) {
 
+    }
+
+    return {
+        validateKnownExpenses
     }
 }
