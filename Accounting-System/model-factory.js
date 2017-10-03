@@ -3,6 +3,7 @@ function modelFactory() {
 
         validator().validateKnownExpenses(type, category, amount, note)
 
+
         return {
             get type() {
                 return type
@@ -37,7 +38,7 @@ function modelFactory() {
         // }
 
 
-        validator().validateBudget(type, category, amount, note)
+        //validator().validateBudget(type, category, amount, note)
 
         return {
             get salary() {
