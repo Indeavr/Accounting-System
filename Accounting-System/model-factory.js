@@ -3,7 +3,6 @@ function modelFactory() {
 
         validator().validateKnownExpenses(type, category, amount, note)
 
-
         return {
             get type() {
                 return type
@@ -38,7 +37,7 @@ function modelFactory() {
         // }
 
 
-        //validator().validateBudget(type, category, amount, note)
+        validator().validateBudget(type, category, amount, note)
 
         return {
             get salary() {
@@ -76,14 +75,14 @@ function modelFactory() {
             date = $('#selectDateExpense-budget').val();
             note = $('subtractMoneyNote-budget').val();
         })
+
         let expense = {
-            category: category,
-            amount: amount,
-            date: date,
-            note: note
+            category : category,
+            amount : amount,
+            date : date,
+            note : note
         };
+
         return expense;
     }
 }
-
-
