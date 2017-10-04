@@ -1,6 +1,4 @@
 function validator() {
-
-
     function validateKnownExpenses(type, category, amount, note) {
 
         function validateType(type) {

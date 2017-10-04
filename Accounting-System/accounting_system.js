@@ -42,6 +42,16 @@ $(function () {
         let budget = modelFactory().createBudget(salary, payday, expenses, savingGoals)
         database().budget = budget
 
+
+        //koleto: some visual functionalities added, when pressing the button
+        $(".wrap-budget-form").hide();
+        $("#myNavbar").show();
+        $("#budget-progressbar").show();
+        loadPiechart();
+        loadBarchart();
+        $("#sidepanel").show(200);
+        //koleto end
+
         console.log(database().budget)
     })
 

@@ -65,9 +65,25 @@ table {
     padding-left: 1%;
 }
 
+.navbar-brand {
+    margin: 0;
+}
+
+.navbar-brand:hover {
+    cursor: pointer;
+}
+
 /*Koleto: End of Collapsable Add income and Add Expense forms*/
 
 /*_________________MAIN______________*/
+
+.wrap-budget-form {
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgba(17,57,155,0.55);
+    padding: 10px 20px;
+    border-radius: 12px ;
+}
 
 .set-budget-heading {
     text-align: center;
