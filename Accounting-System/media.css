@@ -1,0 +1,9 @@
+@media  (max-width: 760px) {
+    .wrap-budget-form {
+        width: 80%;
+    }
+    .form-control{
+        margin:0 auto;
+
+    }
+}

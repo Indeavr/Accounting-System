@@ -32,9 +32,9 @@ function modelFactory() {
 
     function createBudget(salary, payday, knownExpenses, savingGoals) {
 
-        // let calculateBudget = function () {
-        //     return this.salary - this.knownExpenses.reduce( (a,b) => a.amount + b.amount, 0) - this.savingGoals.amount
-        // }
+        let calculateBudget = function () {
+            return this.salary - this.knownExpenses.reduce( (a,b) => a.amount + b.amount, 0) - this.savingGoals.amount
+        }
 
 
         //validator().validateBudget(type, category, amount, note)

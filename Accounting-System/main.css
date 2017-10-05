@@ -78,11 +78,11 @@ table {
 /*_________________MAIN______________*/
 
 .wrap-budget-form {
-    margin: 0 auto;
-    width: 70%;
+    margin: 40px auto;
+    width: 60%;
     background-color: rgba(17,57,155,0.55);
     padding: 10px 20px;
-    border-radius: 12px ;
+    border-radius: 12px;
 }
 
 .set-budget-heading {
@@ -115,6 +115,7 @@ table {
 
 #payday-budget, #salary-budget {
     width: 260px;
+
 }
 
 #expenseType1,
@@ -148,6 +149,43 @@ table {
 #selectDateExpense-budget-label,
 #selectIncome-budget-label {
     font-size: 12px;
+}
+
+#continueToPartTwo{
+    margin-top: 15px;
+}
+
+.form-inline{}
+
+.checkbox{
+    display: block;
+    text-align: center;
+}
+
+#known-expenses-wrap {
+
+}
+
+#salary-span,
+#expenses-span{
+    /*background-color: #fff;*/
+}
+
+.heading-wrap{
+    height: 50px;
+}
+
+.expense-info{
+    display: inline-block;
+    margin-right:20px;
+}
+
+.expense-btn-wrap{
+    margin-bottom:20px;
+}
+
+#expense-progress{
+
 }
 
 /*----------> Main Section <-----------*/
