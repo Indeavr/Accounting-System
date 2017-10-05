@@ -32,11 +32,6 @@ function modelFactory() {
 
     function createBudget(salary, payday, knownExpenses, savingGoals) {
 
-        let calculateBudget = function () {
-            return this.salary - this.knownExpenses.reduce( (a,b) => a.amount + b.amount, 0) - this.savingGoals.amount
-        }
-
-
         //validator().validateBudget(type, category, amount, note)
 
         return {
@@ -53,36 +48,59 @@ function modelFactory() {
                 return savingGoals
             },
 
-            //amount: calculateBudget()
+            get amount() {
+                return salary
+            },
+            get moneyLeft() {
+                return salary
+            },
         }
     }
+
+    function createExpense(date, category, amount, note) {
+
+        return {
+            get type() {
+                return data
+            },
+            get category() {
+                return category
+            },
+            get amount() {
+                return amount
+            },
+            get note() {
+                return note
+            }
+        }
+    }
+
+    function createIncome(date, category, amount, note) {
+
+        return {
+            get type() {
+                return data
+            },
+            get category() {
+                return category
+            },
+            get amount() {
+                return amount
+            },
+            get note() {
+                return note
+            }
+        }
+    }
+
 
     return {
         createKnownExpense,
         createSavingGoals,
-        createBudget
+        createBudget,
+        createExpense,
+        createIncome
     }
 
-    function createExpense() {
-        let category,
-            amount,
-            date,
-            note;
 
-        $('#submitExpense').click(function () {
-            category = $('input[optradio]:checked').text();
-            amount = $('#subtractMoney').val();
-            date = $('#selectDateExpense-budget').val();
-            note = $('subtractMoneyNote-budget').val();
-        })
-
-        let expense = {
-            category: category,
-            amount: amount,
-            date: date,
-            note: note
-        };
-
-        return expense;
-    }
 }

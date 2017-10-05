@@ -30,14 +30,14 @@ $(function () {
             return string.substr(startIndex);
         }(0, salary)
 
-        if(salaryTrimed > 0 && regex.test(salaryTrimed)){
+        if (salaryTrimed > 0 && regex.test(salaryTrimed)) {
             let checked = $('#monthEndDateCheckBox').is(':checked')
 
-            if(checked){
+            if (checked) {
 
             }
 
-            if(typeof payday === "number" && payday > 0 && payday < 31){
+            if (typeof payday === "number" && payday > 0 && payday < 31) {
                 $('#salary-span').text(salaryTrimed)
                 $('#expense-progress').attr({
                     'aria-valuemax': salary,
@@ -47,7 +47,7 @@ $(function () {
                 $(".partOne").hide(100);
                 $(".partTwo").show()
             }
-            else{
+            else {
                 alert('Please enter a valida day of the month')
             }
         }
@@ -67,10 +67,11 @@ $(function () {
 
         expenses.push(expense)
 
-        if(sumOfExpenses > salary){
+        if (sumOfExpenses > salary) {
+            sumOfExpenses -= expense.amount
             alert('You reached the limit of your expenses!')
         }
-        else{
+        else {
             updateForm(sumOfExpenses)
 
             $('#add-known-expense').hide(300)
@@ -94,7 +95,7 @@ $(function () {
         let amount = +$('#subtractMoney-budget').val()
         let note = $('#subtractMoneyNote-budget').val()
 
-        switch (type){
+        switch (type) {
             case 'Week':
                 amount *= 4
                 break
@@ -108,7 +109,6 @@ $(function () {
         console.log(modelFactory().createKnownExpense(type, category, amount, note))
         return modelFactory().createKnownExpense(type, category, amount, note)
     }
-
 
 
     $('#submit-savings').click(function () {
@@ -134,17 +134,25 @@ $(function () {
 
     $('#budget-form-submit').click(function () {
 
+        let initialBudget = +calculateInitialBudget(salary, expenses, savingGoals.amount)
+
         database().budget.expenses = expenses
         database().budget.savingGoals = savingGoals
+        database().budget.amount = initialBudget
+        database().budget.moneyLeft = initialBudget
 
+        console.log(database().budget.amount)
+        console.log(database().budget.moneyLeft)
+
+        vizualiseInitialBudgetProgressBar()
         //koleto: some visual functionalities added, when pressing the button
         $(".wrap-budget-form").hide();
         $("#myNavbar").show();
-        $("#budget-progressbar").show();
         loadPiechart();
         loadBarchart();
         $("#sidepanel").show(200);
         //koleto end
+        $('#budget-progressbar').show()
 
         console.log(database().budget)
     })
@@ -157,9 +165,25 @@ $(function () {
         return modelFactory().createSavingGoals(amount, note)
     }
 
+    function vizualiseInitialBudgetProgressBar() {
+        $('#budget-progress').attr({
+            'aria-valuemax': database().budget.amount,
+            'style': 'width:' + 0 + '%'
+        })
+    }
+
+    let calculateInitialBudget = function (salaryInput, expensesInput, savingsInput) {
+        let expensessum = 0
+        for (let i = 0; i < expensesInput.length; i++) {
+            expensessum += expensesInput[i].amount
+        }
+
+        return salaryInput - expensessum - savingsInput
+    }
+
     //koleto
     //payday end of the month checkbox
-    $("#monthEndDateCheckBox").change(function(){
+    $("#monthEndDateCheckBox").change(function () {
         let $payDayForm = $("#payday-budget");
         if ($payDayForm.prop("disabled") === true) {
             $payDayForm.prop("disabled", false);
@@ -173,13 +197,13 @@ $(function () {
 
     //add known expense - default radio buttons behaviours sat
     var $setPayType = $('input:radio[name=knownExpenseType]');
-    if ($setPayType.is(":checked") === false ) {
+    if ($setPayType.is(":checked") === false) {
         $setPayType.filter("[value=month]").prop("checked", true);
     }
 
-    $setPayType.change(function() {
+    $setPayType.change(function () {
         let payType = ["Month", "Week", "Daily", "Year"];
-        for (let i = 0; i<=payType.length-1; i++) {
+        for (let i = 0; i <= payType.length - 1; i++) {
             if ($(this).attr("value") === payType[i].toLowerCase()) {
                 $("#selectDateExpense-budget-label").text(payType[i]);
                 break;
@@ -188,12 +212,12 @@ $(function () {
     });
 
     var $setCategory = $('input:radio[name=knownExpenseCategory]');
-    if ($setCategory.is(":checked") === false ) {
+    if ($setCategory.is(":checked") === false) {
         $setCategory.filter("[value=miscellaneous]").prop("checked", true);
         $("#selectIncome-budget-label").text("default: Miscellaneous");
     }
 
-    $setCategory.change(function() {
+    $setCategory.change(function () {
         let categories = [
             "Taxes", "Housing", "Food", "Automobile",
             "Insurance", "Debt Repayment", "Entertainment", "Clothing",
@@ -202,7 +226,7 @@ $(function () {
 
         let $btnLabel = $("#selectIncome-budget-label");
         let $noteField = $("#otherExpenseCategory-budget");
-        for (let i = 0; i<=categories.length-1; i++) {
+        for (let i = 0; i <= categories.length - 1; i++) {
             if ($(this).attr("value") === categories[i].toLowerCase()) {
                 $btnLabel.text(categories[i]);
                 break;

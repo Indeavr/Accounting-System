@@ -80,7 +80,7 @@ table {
 .wrap-budget-form {
     margin: 40px auto;
     width: 60%;
-    background-color: rgba(17,57,155,0.55);
+    background-color: rgba(17, 57, 155, 0.55);
     padding: 10px 20px;
     border-radius: 12px;
 }
@@ -151,13 +151,14 @@ table {
     font-size: 12px;
 }
 
-#continueToPartTwo{
+#continueToPartTwo {
     margin-top: 15px;
 }
 
-.form-inline{}
+.form-inline {
+}
 
-.checkbox{
+.checkbox {
     display: block;
     text-align: center;
 }
@@ -167,62 +168,54 @@ table {
 }
 
 #salary-span,
-#expenses-span{
+#expenses-span {
     /*background-color: #fff;*/
 }
 
-.heading-wrap{
+.heading-wrap {
     height: 50px;
 }
 
-.expense-info{
+.expense-info {
     display: inline-block;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-.expense-btn-wrap{
-    margin-bottom:20px;
+.expense-btn-wrap {
+    margin-bottom: 20px;
 }
 
-#expense-progress{
+#expense-progress {
 
 }
 
 /*----------> Main Section <-----------*/
-.budget-progressbar {
-    height: 40px;
-    margin: 10px;
+#budget-progressbar {
+    width: 70%;
+    height: 35px;
+    margin: 0 auto;
 }
 
-progress {
-    height: 40px;
-    width: 400px;
-    background-color: mediumspringgreen;
-    border-radius: 10px;
-}
-
-progress::-webkit-progress-value {
-    background-color: mediumspringgreen;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
-
-progress::-webkit-progress-bar {
-    border-radius: 10px;
-    background-color: #cc0000;
-}
-
-.showBudgetButton {
-    height: 40px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    vertical-align: 15px;
+#budget-progress {
+    color: #000;
 }
 
 #piechart {
     width: 550px;
     height: 400px;
+
+}
+
+.budget-section {
+
+}
+
+#budget-pg-current,
+#budget-pg-total {
+    color: #000;
+}
+
+#budget-pg-current {
 
 }
 
