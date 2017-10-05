@@ -48,12 +48,9 @@ function modelFactory() {
                 return savingGoals
             },
 
-            get amount() {
-                return salary
-            },
-            get moneyLeft() {
-                return salary
-            },
+            amount: salary,
+
+            moneyLeft: salary
         }
     }
 

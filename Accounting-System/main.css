@@ -189,6 +189,13 @@ table {
 
 }
 
+#expense-pb{
+    width:70%;
+    margin-left: auto;
+    margin-right:auto;
+    height: 31px;
+}
+
 /*----------> Main Section <-----------*/
 #budget-progressbar {
     width: 70%;
