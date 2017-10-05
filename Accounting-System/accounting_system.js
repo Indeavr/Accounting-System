@@ -76,39 +76,67 @@ $(function () {
     //koleto
     //payday end of the month checkbox
     $("#monthEndDateCheckBox").change(function(){
-        if ($("#payday-budget").prop("disabled") === true) {
-            $("#payday-budget").prop("disabled", false);
+        let $payDayForm = $("#payday-budget");
+        if ($payDayForm.prop("disabled") === true) {
+            $payDayForm.prop("disabled", false);
+            $payDayForm.attr("placeholder", "Specify date of the month");
         } else {
-            $("#payday-budget").val("");
-            $("#payday-budget").prop("disabled", true);
+            $payDayForm.val("");
+            $payDayForm.attr("placeholder", "End of the month");
+            $payDayForm.prop("disabled", true);
         }
     }) 
 
-    //add known expense - select pay type button text
-    //<input type="radio" name="knownExpenseType" value="month">
-    var $setMonths = $('input:radio[name=knownExpenseType]');
-    if ($setMonths.is(":checked") === false ) {
-        $setMonths.filter("[value=month]").prop("checked", true);
-        // $("#selectDateExpense-budget-label").text($setMonths.filter("[value=month]").prev().text());
-        // console.log($setMonths.prev())
+    //add known expense - default radio buttons behaviours sat
+    var $setPayType = $('input:radio[name=knownExpenseType]');
+    if ($setPayType.is(":checked") === false ) {
+        $setPayType.filter("[value=month]").prop("checked", true);
     }
     
-    //$("#selectDateExpense-budget-label").text
-    $('input:radio[name=knownExpenseType]').change(function() {
-        // let i = 0;
-        // let variable = 0;
-        // while (variable !== undefined) {
-        //     variable = $('input:radio[name=knownExpenseType]')[i]; 
-        //     console.log(variable)
-        //     i++
-        // }
-
-        
-        console.log($("label").filter(  ) )
-        
+    $setPayType.change(function() {
+        let payType = ["Month", "Week", "Daily", "Year"];
+        for (let i = 0; i<=payType.length-1; i++) {
+            if ($(this).attr("value") === payType[i].toLowerCase()) {
+                $("#selectDateExpense-budget-label").text(payType[i]);
+                break;
+            }
+        }
     });
-    //setter na gornoto
     
+    var $setCategory = $('input:radio[name=knownExpenseCategory]');
+    if ($setCategory.is(":checked") === false ) {
+        $setCategory.filter("[value=miscellaneous]").prop("checked", true);
+        $("#selectIncome-budget-label").text("default: Miscellaneous");
+    }
+    
+    $setCategory.change(function() {
+        let categories = [
+            "Taxes", "Housing", "Food", "Automobile",
+            "Insurance", "Debt Repayment", "Entertainment", "Clothing",
+            "Savings", "Medical/Dental", "Miscellaneous", "School",
+            "Investments", "Childcare", "Other"];
+
+        let $btnLabel = $("#selectIncome-budget-label");
+        let $noteField = $("#otherExpenseCategory-budget");
+        for (let i = 0; i<=categories.length-1; i++) {
+            if ($(this).attr("value") === categories[i].toLowerCase()) {
+                $btnLabel.text(categories[i]);
+                break;
+            } else if ($(this).attr("value") === "debt") {
+                $btnLabel.text(categories[5]);
+                break;
+            } else if ($(this).attr("value") === "medical") {
+                $btnLabel.text(categories[9]);
+                break;
+            }
+        }
+
+        if ($(this).attr("value") === "other") {
+            $noteField.prop("disabled", false);
+        } else {
+            $noteField.prop("disabled", true);
+        }
+    });
 
     //koleto
 
