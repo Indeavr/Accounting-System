@@ -50,168 +50,177 @@
             Set Budget
         </h2>
         <form id="setBudgetForm" class="form-group">
-
-            <div class="form-inline">
-                <label class="budget-form-label" id="salary">Salary:</label>
-                <input type="text" name="salary-budget" id="salary-budget" class="form-control" placeholder="Specify your salary in $">
-            </div>
-            <div class="form-inline">
-                <label class="budget-form-label" id="payday">Payday:</label>
-                <input type="date" name="payday-budget" id="payday-budget" class="form-control" placeholder="Specify date of the month">
-                <div class="checkbox">
-                    <label><input type="checkbox" id="monthEndDateCheckBox">End of the month</label>
+            <div class="partOne">
+                <div class="form-inline">
+                    <label class="budget-form-label" id="salary">Salary:</label>
+                    <input type="text" name="salary-budget" id="salary-budget" class="form-control" placeholder="Specify your salary in $">
                 </div>
-            </div>
-            <div class="wrap">
-                <button id="addExpense-btn" type="button" class="btn btn-primary">
-                    Add Known Expense
-                </button>
-            </div>
-            <div class="collapse" id="add-known-expense">
-                <form id="addExpense-budget" class="form-group" aria-expanded="true">
-
-                    <div>
-                        <label>Add expense fill form</label>
+                <div class="form-inline">
+                    <label class="budget-form-label" id="payday">Payday:</label>
+                    <input type="date" name="payday-budget" id="payday-budget" class="form-control" placeholder="Specify date of the month">
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="monthEndDateCheckBox">End of the month</label>
                     </div>
+                </div>
 
-                    <div>
-                        <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                data-target="#selectDateExpense-budget">
-                            Select Pay Type (<span id="selectDateExpense-budget-label">default: Month</span>)<span
-                                class="caret"></span>
-                        </button>
-                        <div class="collapse" id="selectDateExpense-budget">
-                            <div class="row">
-                                <div class="col-xs-3 radio" id="expenseType1"><label><input type="radio"
-                                                                                            name="knownExpenseType"
-                                                                                            value="month">Month</label>
-                                </div>
-                                <div class="col-xs-3 radio" id="expenseType2"><label><input type="radio"
-                                                                                            name="knownExpenseType"
-                                                                                            value="week">Week</label>
-                                </div>
-                                <div class="col-xs-3 radio" id="expenseType3"><label><input type="radio"
-                                                                                            name="knownExpenseType"
-                                                                                            value="daily">Daily</label>
-                                </div>
-                                <div class="col-xs-3 radio" id="expenseType4"><label><input type="radio"
-                                                                                            name="knownExpenseType"
-                                                                                            value="year">Year</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="partOne wrap">
+                    <button id="continueToPartTwo" type="button" class="btn btn-primary">Continue</button>
+                </div>
 
-                    <div>
-                        <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                data-target="#showCategoriesExpense-budget">
-                            Select category (<span id="selectIncome-budget-label">default: Miscellaneous</span>)<span
-                                class="caret"></span>
-                        </button>
-                        <div class="collapse" id="showCategoriesExpense-budget">
-                            <div class="row">
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="taxes">Taxes</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="housing">Housing</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="food">Food</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="automobile">Automobile</label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="insurance">Insurance</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="debt">Debt
-                                    Repayment</label></div>
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="entertainment">Entertainment
-                                </label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="clothing">Clothing</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="savings">Savings</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="medical">Medical/Dental</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="miscellaneous">Miscellaneous</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="school">School</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
-                                                                          value="investments">Investments</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="childcare">Childcare</label>
-                                </div>
-                                <div class="col-xs-3 radio"><label><input type="radio"
-                                                                          name="knownExpenseCategory" value="other">Other</label>
-                                </div>
-                                <div class="col-xs-9"><textarea class="form-control" rows="1"
-                                                                id="otherExpenseCategory-budget"
-                                                                placeholder="Other category:" disabled></textarea></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input name="money" type="money" class="form-control" id="subtractMoney-budget"
-                           placeholder="Specify amonth of expense in $">
-
-                    <textarea name="note" class="form-control" rows="2" cols="50" id="subtractMoneyNote-budget"
-                              placeholder="Short note:"></textarea>
-
-                    <button type="button" class="btn btn-default" id="submitExpense-budget">Submit expense</button>
-                    <button type="button" class="btn btn-default" id="cancelExpenseSubmit-budget">Cancel</button>
-
-
-                </form>
             </div>
-            <!---->
-            <div>
+            
+            <div class="partTwo" hidden>
                 <div class="wrap">
-
-
-                    <button id="addSavingGoal-btn" type="button" class="btn btn-primary">
-                        Add Savings Goal
+                    <button id="addExpense-btn" type="button" class="btn btn-primary">
+                        Add Known Expense
                     </button>
                 </div>
-                <form id="savings-form" class="collapse form-group">
-                    <div>
-                        <label>
-                            Value:
-                        </label>
-                        <input type="text" class="form-control" id="savings-form-money" placeholder="Specify amonth of the goal in $">
-                    </div>
-                    <div>
-                        <label>
-                            Description:
-                        </label>
-                        <textarea class="form-control" rows="2" cols="50" id="savings-form-note"
+                <div class="collapse" id="add-known-expense">
+                    <form id="addExpense-budget" class="form-group" aria-expanded="true">
+    
+                        <div>
+                            <label>Add expense fill form</label>
+                        </div>
+    
+                        <div>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#selectDateExpense-budget">
+                                Select Pay Type (<span id="selectDateExpense-budget-label">default: Month</span>)<span
+                                    class="caret"></span>
+                            </button>
+                            <div class="collapse" id="selectDateExpense-budget">
+                                <div class="row">
+                                    <div class="col-xs-3 radio" id="expenseType1"><label><input type="radio"
+                                                                                                name="knownExpenseType"
+                                                                                                value="month">Month</label>
+                                    </div>
+                                    <div class="col-xs-3 radio" id="expenseType2"><label><input type="radio"
+                                                                                                name="knownExpenseType"
+                                                                                                value="week">Week</label>
+                                    </div>
+                                    <div class="col-xs-3 radio" id="expenseType3"><label><input type="radio"
+                                                                                                name="knownExpenseType"
+                                                                                                value="daily">Daily</label>
+                                    </div>
+                                    <div class="col-xs-3 radio" id="expenseType4"><label><input type="radio"
+                                                                                                name="knownExpenseType"
+                                                                                                value="year">Year</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#showCategoriesExpense-budget">
+                                Select category (<span id="selectIncome-budget-label">default: Miscellaneous</span>)<span
+                                    class="caret"></span>
+                            </button>
+                            <div class="collapse" id="showCategoriesExpense-budget">
+                                <div class="row">
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="taxes">Taxes</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="housing">Housing</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="food">Food</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="automobile">Automobile</label>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="insurance">Insurance</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="debt">Debt
+                                        Repayment</label></div>
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="entertainment">Entertainment
+                                    </label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="clothing">Clothing</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="savings">Savings</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="medical">Medical/Dental</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="miscellaneous">Miscellaneous</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="school">School</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3 radio"><label><input type="radio" name="knownExpenseCategory"
+                                                                              value="investments">Investments</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="childcare">Childcare</label>
+                                    </div>
+                                    <div class="col-xs-3 radio"><label><input type="radio"
+                                                                              name="knownExpenseCategory" value="other">Other</label>
+                                    </div>
+                                    <div class="col-xs-9"><textarea class="form-control" rows="1"
+                                                                    id="otherExpenseCategory-budget"
+                                                                    placeholder="Other category:" disabled></textarea></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <input name="money" type="money" class="form-control" id="subtractMoney-budget"
+                               placeholder="Specify amonth of expense in $">
+    
+                        <textarea name="note" class="form-control" rows="2" cols="50" id="subtractMoneyNote-budget"
                                   placeholder="Short note:"></textarea>
+    
+                        <button type="button" class="btn btn-default" id="submitExpense-budget">Submit expense</button>
+                        <button type="button" class="btn btn-default" id="cancelExpenseSubmit-budget">Cancel</button>
+    
+    
+                    </form>
+                </div>
+                <!---->
+                <div>
+                    <div class="wrap">
+    
+    
+                        <button id="addSavingGoal-btn" type="button" class="btn btn-primary">
+                            Add Savings Goal
+                        </button>
                     </div>
-                    <button type="button" class="btn btn-default" id="submit-savings">Submit savings</button>
-                    <button type="button" class="btn btn-default" id="cancelSubmit-savings">Cancel</button>
-
-                </form>
-            </div>
-            <div class="wrap" id="wrap-submit">
-                <button type="button" class="btn btn-lg" id="budget-form-submit">Set Budget</button>
+                    <form id="savings-form" class="collapse form-group">
+                        <div>
+                            <label>
+                                Value:
+                            </label>
+                            <input type="text" class="form-control" id="savings-form-money" placeholder="Specify amonth of the goal in $">
+                        </div>
+                        <div>
+                            <label>
+                                Description:
+                            </label>
+                            <textarea class="form-control" rows="2" cols="50" id="savings-form-note"
+                                      placeholder="Short note:"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-default" id="submit-savings">Submit savings</button>
+                        <button type="button" class="btn btn-default" id="cancelSubmit-savings">Cancel</button>
+    
+                    </form>
+                </div>
+                <div class="wrap" id="wrap-submit">
+                    <button type="button" class="btn btn-lg" id="budget-form-submit">Set Budget</button>
+                </div>
             </div>
 
         </form>

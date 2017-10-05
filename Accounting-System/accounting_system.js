@@ -4,6 +4,14 @@ $(function () {
     let savingGoals
 
     //for the initial budget form --> expense form
+
+    //koleto
+    $('#continueToPartTwo').click(function () {
+        $(".partOne").hide(100);
+        $(".partTwo").show()
+    })
+    //koleto
+
     $('#submitExpense-budget').on('click', function () {
         expenses = getExpenses()
         $('#add-known-expense').hide(300)
