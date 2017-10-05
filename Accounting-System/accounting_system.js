@@ -73,4 +73,43 @@ $(function () {
         return modelFactory().createSavingGoals(amount, note)
     }
 
+    //koleto
+    //payday end of the month checkbox
+    $("#monthEndDateCheckBox").change(function(){
+        if ($("#payday-budget").prop("disabled") === true) {
+            $("#payday-budget").prop("disabled", false);
+        } else {
+            $("#payday-budget").val("");
+            $("#payday-budget").prop("disabled", true);
+        }
+    }) 
+
+    //add known expense - select pay type button text
+    //<input type="radio" name="knownExpenseType" value="month">
+    var $setMonths = $('input:radio[name=knownExpenseType]');
+    if ($setMonths.is(":checked") === false ) {
+        $setMonths.filter("[value=month]").prop("checked", true);
+        // $("#selectDateExpense-budget-label").text($setMonths.filter("[value=month]").prev().text());
+        // console.log($setMonths.prev())
+    }
+    
+    //$("#selectDateExpense-budget-label").text
+    $('input:radio[name=knownExpenseType]').change(function() {
+        // let i = 0;
+        // let variable = 0;
+        // while (variable !== undefined) {
+        //     variable = $('input:radio[name=knownExpenseType]')[i]; 
+        //     console.log(variable)
+        //     i++
+        // }
+
+        
+        console.log($("label").filter(  ) )
+        
+    });
+    //setter na gornoto
+    
+
+    //koleto
+
 })
