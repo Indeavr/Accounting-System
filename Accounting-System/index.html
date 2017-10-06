@@ -18,6 +18,9 @@
 
 </head>
 <body>
+<div class="container">
+
+<div class="row">
 <header>
     <!--<h2 class="header-title">-->
     <!--Accounting System test-->
@@ -26,7 +29,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="navbarBtnRight" hidden>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -38,13 +41,69 @@
                     <li><a href="#" id="addIncomeBtn">Add income</a></li>
                     <li><a href="#" id="addExpenseBtn">Add expense</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button class="navbar-btn btn" id="callendarBtn">Callendar</button>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">History<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="submenuSwitch" data-toggle="dropdown" href="#">By category<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Taxes</a></li>
+                                    <li><a href="">Housing</a></li>
+                                    <li><a href="">Food</a></li>
+                                    <li><a href="">Automobile</a></li>
+                                    <li><a href="">Insurance</a></li>
+                                    <li><a href="">Debt Repayment</a></li>
+                                    <li><a href="">Entertainment and Recreation</a></li>
+                                    <li><a href="">Clothing</a></li>
+                                    <li><a href="">Savings</a></li>
+                                    <li><a href="">Medical/Dental</a></li>
+                                    <li><a href="">Miscellaneous</a></li>
+                                    <li><a href="">School/Childcare</a></li>
+                                    <li><a href="">Investments</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="submenuSwitch" data-toggle="dropdown" href="#">Date/Month/Year<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Date Form</a></li>
+                                    <li><a href="">Month Form</a></li>
+                                    <li><a href="">Year Form</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="submenuSwitch" data-toggle="dropdown" href="#">Range<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Form: form</a></li>
+                                    <li><a href="">To: form</a></li>
+                                    <li>
+                                        <button class="navbar-btn btn" id="showBtn">Show</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Full history</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
     <!-- Koleto: End of Navigational menu -->
 </header>
-<main>
+</div>
 
+<div class="row">
+<main>
+        
     <!--___Start of SET BUDGET Menu___-->
     <div class="wrap-budget-form">
 
@@ -266,7 +325,7 @@
 
 
     <!-- Koleto: Collapsable Add income and Add Expense forms -->
-    <div class="row">
+    
         <div class="row">
             <!-- Koleto: Collapsable Add income and Add Expense forms -->
             <div class="col-xs-6">
@@ -434,7 +493,10 @@
             </div>
             <!-- Koleto: End of Collapsable Add income and Add Expense forms -->
         </div>
-        <div class="col-xs-9">
+
+        <div class="row">
+        
+        <div class="col-xs-10">
 
             <div class="main-content row">
                 <div class="col-xs-12">
@@ -444,12 +506,8 @@
                             <div id="budget-progress" class="progress-bar progress-bar-success" role="progressbar"
                                  aria-valuenow="40"
                                  aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                                <span id="budget-pg-current">
-   20
-                                </span>/
-                                <span id="budget-pg-total">
-                                    100
-                                </span>
+                                <span id="budget-pg-current">20</span>
+                                <span id="budget-pg-total">100</span>
                             </div>
                         </div>
                     </div>
@@ -464,79 +522,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-3">
+        <div class="col-xs-2">
             <aside id="sidepanel" hidden>
-                <!-- Koleto: Beginning of Sidepanel navigation -->
-                <nav class="navbar navbar-inverse">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mySidebarNav">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse" id="mySidebarNav">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <button class="navbar-btn btn" id="callendarBtn">Callendar</button>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">History<span
-                                        class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a class="submenuSwitch" data-toggle="dropdown" href="#">By category<span
-                                                class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="">Taxes</a></li>
-                                            <li><a href="">Housing</a></li>
-                                            <li><a href="">Food</a></li>
-                                            <li><a href="">Automobile</a></li>
-                                            <li><a href="">Insurance</a></li>
-                                            <li><a href="">Debt Repayment</a></li>
-                                            <li><a href="">Entertainment and Recreation</a></li>
-                                            <li><a href="">Clothing</a></li>
-                                            <li><a href="">Savings</a></li>
-                                            <li><a href="">Medical/Dental</a></li>
-                                            <li><a href="">Miscellaneous</a></li>
-                                            <li><a href="">School/Childcare</a></li>
-                                            <li><a href="">Investments</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="submenuSwitch" data-toggle="dropdown" href="#">Date/Month/Year<span
-                                                class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="">Date Form</a></li>
-                                            <li><a href="">Month Form</a></li>
-                                            <li><a href="">Year Form</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="submenuSwitch" data-toggle="dropdown" href="#">Range<span
-                                                class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="">Form: form</a></li>
-                                            <li><a href="">To: form</a></li>
-                                            <li>
-                                                <button class="navbar-btn btn" id="showBtn">Show</button>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Full history</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <!-- Koleto: End of Sidepanel navigation -->
-
                 <div class="quickview-container">
                     <!-- Koleto: Beginning of callendar -->
                     <div class="callendar">
-                        <table class="table-condensed table-bordered table-striped">
+                        <table id="callendarTable" class="table-condensed table-bordered table-striped">
                             <thead>
                             <tr>
                                 <th colspan="7">
@@ -607,19 +598,26 @@
                         </table>
                     </div>
                     <!-- Koleto: End of callendar -->
-                    <div class="history">
+                    <div id="historyItem" class="history">
                         <div class="historyItem">Some history item</div>
                     </div>
 
                 </div>
             </aside>
         </div>
-    </div>
+
+        </div>
 
 </main>
-<footer>
+</div>
 
+<div class="row">
+<footer>
+                    
 </footer>
+</div>
+    
+</div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="sidepanel.js"></script>
@@ -632,7 +630,7 @@
 <script type="text/javascript" src="Validator.js"></script>
 <script type="text/javascript" src="model-factory.js"></script>
 <script type="text/javascript" src="accounting_system.js"></script>
-<script src="form-controll.js"></script>
+<script type="text/javascript" src="form-controll.js"></script>
 <script type="text/javascript" src="navbar.js"></script>
 
 

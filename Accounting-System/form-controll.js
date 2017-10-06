@@ -146,8 +146,10 @@ $(function () {
 
         vizualiseInitialBudgetProgressBar()
         //koleto: some visual functionalities added, when pressing the button
+        $("#navbarBtnRight").removeAttr("hidden");
         $(".wrap-budget-form").hide();
-        $("#myNavbar").show();
+        $("#myNavbar").removeAttr("hidden");
+        $("#myNavbar").attr("class", "navbar-collapse collapse")
         loadPiechart();
         loadBarchart();
         $("#sidepanel").show(200);

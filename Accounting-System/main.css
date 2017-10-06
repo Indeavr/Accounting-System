@@ -251,6 +251,14 @@ table {
     background-color: #1F1C1C;
 }
 
+#pesho {
+    width: 100%;
+    float: right;
+    right: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
 /*---------->Qick View Section <----------*/
 
 /*________________FOOTER_______________*/
