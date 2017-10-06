@@ -137,6 +137,7 @@ $(function () {
         let initialBudget = +calculateInitialBudget(salary, expenses, savingGoals.amount)
 
         database().budget.expenses = expenses
+        database().expenses.add(expenses)
         database().budget.savingGoals = savingGoals
         database().budget.amount = initialBudget
         database().budget.moneyLeft = initialBudget
@@ -155,6 +156,7 @@ $(function () {
         $("#sidepanel").show(200);
         //koleto end
         $('#budget-progressbar').show()
+        $('.main-content').show()
 
         console.log(database().budget)
     })

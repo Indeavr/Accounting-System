@@ -189,10 +189,10 @@ table {
 
 }
 
-#expense-pb{
-    width:70%;
+#expense-pb {
+    width: 70%;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     height: 31px;
 }
 
@@ -223,6 +223,36 @@ table {
 }
 
 #budget-pg-current {
+
+}
+
+#account-info-wrap {
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 13px;
+}
+
+#savings-info {
+    background-color: red;
+}
+
+#account-info {
+    background-color: blueviolet;
+}
+
+.accountInfo {
+    height: 100%;
+}
+
+.account-info ul {
+    display: flex;
+}
+
+.account-info ul li {
+    display: flex;
+}
+
+.info-item {
 
 }
 
@@ -257,6 +287,10 @@ table {
     right: 0px;
     padding: 10px;
     text-align: center;
+}
+
+#main-header {
+    width: 100%;
 }
 
 /*---------->Qick View Section <----------*/
