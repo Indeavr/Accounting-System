@@ -35,21 +35,11 @@ function modelFactory() {
         //validator().validateBudget(type, category, amount, note)
 
         return {
-            get salary() {
-                return salary
-            },
-            get payday() {
-                return payday
-            },
-            get knownExpenses() {
-                return knownExpenses
-            },
-            get savingGoals() {
-                return savingGoals
-            },
-
+            salary,
+            payday,
+            knownExpenses,
+            savingGoals,
             amount: salary,
-
             moneyLeft: salary
         }
     }

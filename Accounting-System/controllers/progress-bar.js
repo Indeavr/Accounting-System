@@ -3,5 +3,5 @@ function showBudget() {
     let knownExpenses = 20;
     let savingGoal = 20;
     let budget = income - knownExpenses - savingGoal;
-    document.getElementById("progressbar").value = budget; 
+    document.getElementById("progressbar").value = budget;
 }

@@ -1,22 +1,19 @@
-$(function () {
-
+const formControllerFunc = function (database, modelFactory) {
     let salary
     let expenses = []
     let savingGoals
-
     let sumOfExpenses = 0
 
     //for the initial budget form --> expense form
 
     //koleto
-    $('#continueToPartTwo').click(function () {
-
+    function continueToPartTwo() {
         salary = $('#salary-budget').val()
         let payday = +$('#payday-budget').val()
 
 
-        let budget = modelFactory().createBudget(salary, payday, [], {})
-        database().budget = budget
+        let budget = modelFactory.createBudget(salary, payday, [], {})
+        database.budget = budget
 
         let regex = new RegExp('[0-9]+')
 
@@ -54,13 +51,14 @@ $(function () {
         else {
             alert('Salary must be a number!')
         }
-    })
+    }
 
     function getPercentOfProgress() {
         return ((sumOfExpenses / salary) * 100)
     }
 
-    $('#submitExpense-budget').on('click', function () {
+
+    function submitExpenseBudget() {
         let expense = getExpenses()
 
         sumOfExpenses += expense.amount
@@ -76,17 +74,6 @@ $(function () {
 
             $('#add-known-expense').hide(300)
         }
-    })
-
-    function updateForm(sumOfExpenses) {
-        $('#expenses-span').text(sumOfExpenses)
-        $('.counter').text(expenses.length)
-        $('#expense-progress').attr({
-            'style': 'width:' + getPercentOfProgress() + '%'
-        })
-        $('#subtractMoneyNote-budget').val(0)
-        $('#subtractMoney-budget').val(0)
-
     }
 
     let getExpenses = function () {
@@ -106,47 +93,54 @@ $(function () {
                 amount /= 12
                 break
         }
-        console.log(modelFactory().createKnownExpense(type, category, amount, note))
-        return modelFactory().createKnownExpense(type, category, amount, note)
+        console.log(modelFactory.createKnownExpense(type, category, amount, note))
+        return modelFactory.createKnownExpense(type, category, amount, note)
+    }
+
+    function updateForm(sumOfExpenses) {
+        $('#expenses-span').text(sumOfExpenses)
+        $('.counter').text(expenses.length)
+        $('#expense-progress').attr({
+            'style': 'width:' + getPercentOfProgress() + '%'
+        })
+        $('#subtractMoneyNote-budget').val(0)
+        $('#subtractMoney-budget').val(0)
     }
 
 
-    $('#submit-savings').click(function () {
+    function submitSavings() {
         savingGoals = getSavings()
         $('#savings-form').hide(300)
-    })
+    }
 
-    $('#cancelExpenseSubmit-budget').click(function () {
-        $('#add-known-expense').hide(600)
-    })
+    let getSavings = function () {
 
-    $('#addExpense-btn').click(function () {
-        $('#add-known-expense').toggle(200)
-    })
+        let amount = $('#savings-form-money').val()
+        let note = $('#savings-form-note').val()
 
-    $('#cancelSubmit-savings').click(function () {
-        $('#savings-form').hide(600)
-    })
+        return modelFactory.createSavingGoals(amount, note)
+    }
 
-    $('#addSavingGoal-btn').click(function () {
-        $('#savings-form').toggle(200)
-    })
 
-    $('#budget-form-submit').click(function () {
+    function submitBudget() {
 
         let initialBudget = +calculateInitialBudget(salary, expenses, savingGoals.amount)
 
-        database().budget.expenses = expenses
-        database().expenses.add(expenses)
-        database().budget.savingGoals = savingGoals
-        database().budget.amount = initialBudget
-        database().budget.moneyLeft = initialBudget
+        database.budget.expenses = expenses
+        database.expenses.push(expenses)
+        database.budget.savingGoals = savingGoals
+        database.budget.amount = initialBudget
+        database.budget.moneyLeft = initialBudget
 
-        console.log(database().budget.amount)
-        console.log(database().budget.moneyLeft)
+        console.log(database.expenses)
+        console.log(database.budget.expenses)
+        console.log(database.budget.savingGoals)
+        console.log(database.budget.amount)
+        console.log(database.budget.moneyLeft)
 
         vizualiseInitialBudgetProgressBar()
-        //koleto: some visual functionalities added, when pressing the button
+
+        fillInfo()
         $("#navbarBtnRight").removeAttr("hidden");
         $(".wrap-budget-form").hide();
         $("#myNavbar").removeAttr("hidden");
@@ -154,26 +148,10 @@ $(function () {
         loadPiechart();
         loadBarchart();
         $("#sidepanel").show(200);
-        //koleto end
         $('#budget-progressbar').show()
         $('.main-content').show()
 
-        console.log(database().budget)
-    })
-
-    let getSavings = function () {
-
-        let amount = $('#savings-form-money').val()
-        let note = $('#savings-form-note').val()
-
-        return modelFactory().createSavingGoals(amount, note)
-    }
-
-    function vizualiseInitialBudgetProgressBar() {
-        $('#budget-progress').attr({
-            'aria-valuemax': database().budget.amount,
-            'style': 'width:' + 0 + '%'
-        })
+        console.log(database.budget)
     }
 
     let calculateInitialBudget = function (salaryInput, expensesInput, savingsInput) {
@@ -184,6 +162,18 @@ $(function () {
 
         return salaryInput - expensessum - savingsInput
     }
+
+    function vizualiseInitialBudgetProgressBar() {
+        $('#budget-progress').attr({
+            'aria-valuemax': database.budget.amount,
+            'style': 'width:' + 0 + '%'
+        })
+    }
+
+    function fillInfo() {
+
+    }
+
 
     //koleto
     //payday end of the month checkbox
@@ -250,6 +240,11 @@ $(function () {
         }
     });
 
-    //koleto
+    return {
+        continueToPartTwo,
+        submitExpenseBudget,
+        submitSavings,
+        submitBudget
+    }
+}
 
-})

@@ -1,39 +1,40 @@
 $(function () {
 
-    $('#submitExpense').click(function () {
-        let date = $('#selectDateExpense-budget').val();  //TODO: setup html
-        let category = $('input[optradio]:checked').text();
-        let amount = +$('#subtractMoney').val();
-        let note = $('subtractMoneyNote-budget').val();
-
-        let expense = modelFactory().createExpense(date, category, amount, note)
-        database().expenses.push(expense)
-
-        calculateBudget(expense.amount)
-
-        $('#addExpense').hide(200)
+    $('#continueToPartTwo').click(function () {
+        container.formController.continueToPartTwo()
     })
 
-    $('#submitIncome').click(function () {
-        let date = $('#showCallendarIncome')    // TODO: setup html
-        let category = $("input[name = 'income-category-item']:checked").val()
-        let amount = +$('#addMoney').val()
-        let note = $('#addMoneyNote').val()
-
-        let income = modelFactory().createIncome(date, category, amount, note)
-        database().incomes.push(income)
-
-        $('#addIncome').hide(200)
+    $('#addExpense-btn').click(function () {
+        $('#add-known-expense').toggle(200)
     })
 
-    function calculateBudget(expense) {
-        database().budget.moneyLeft -= expense
+    $('#submitExpense-budget').click(function () {
+        container.formController.submitExpenseBudget()
+    })
 
-        let percent = (database().budget.amount / database().budget.moneyLeft ) * 100
+    $('#cancelExpenseSubmit-budget').click(function () {
+        $('#add-known-expense').hide(600)
+    })
 
-        $('#budget-progress').attr({
-            'style': 'width' + percent + '%'
-        })
-    }
 
+    $('#addSavingGoal-btn').click(function () {
+        $('#savings-form').toggle(200)
+    })
+
+    $('#submit-savings').click(function () {
+        container.formController.submitSavings()
+    })
+
+    $('#cancelSubmit-savings').click(function () {
+        $('#savings-form').hide(600)
+    })
+
+
+    $('#budget-form-submit').click(function () {
+        container.formController.submitBudget()
+    })
+
+    // container.incomeController()
+    // container.expensesController()
+    // container.navbarController()
 })

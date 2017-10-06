@@ -1,12 +1,13 @@
-$(document).ready(function(){
+const navbarControllerFunc = function (database, modelFactory) {
+
     let incomeOn = true;
     let expenseOn = true;
 
-    $('#reloadPage').click(function() {
+    $('#reloadPage').click(function () {
         location.reload();
     });
 
-    $("#addIncomeBtn").click(function(e){
+    $("#addIncomeBtn").click(function (e) {
         if (incomeOn && expenseOn === false) {
             $("#addIncome").hide(100);
             incomeOn = false;
@@ -18,7 +19,7 @@ $(document).ready(function(){
         }
     })
 
-    $("#addExpenseBtn").click(function(e){
+    $("#addExpenseBtn").click(function (e) {
         if (expenseOn && incomeOn === false) {
             $("#addExpense").hide(100);
             expenseOn = false;
@@ -29,4 +30,4 @@ $(document).ready(function(){
             expenseOn = true;
         }
     })
-});
+}
