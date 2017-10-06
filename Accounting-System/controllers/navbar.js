@@ -7,7 +7,7 @@ const navbarControllerFunc = function (database, modelFactory) {
         location.reload();
     });
 
-    $("#addIncomeBtn").click(function (e) {
+    function showIncomeBar() {
         if (incomeOn && expenseOn === false) {
             $("#addIncome").hide(100);
             incomeOn = false;
@@ -17,9 +17,9 @@ const navbarControllerFunc = function (database, modelFactory) {
             $("#addIncome").show(200);
             incomeOn = true;
         }
-    })
+    }
 
-    $("#addExpenseBtn").click(function (e) {
+    function showExpensesBar() {
         if (expenseOn && incomeOn === false) {
             $("#addExpense").hide(100);
             expenseOn = false;
@@ -29,5 +29,10 @@ const navbarControllerFunc = function (database, modelFactory) {
             $("#addExpense").show(200);
             expenseOn = true;
         }
-    })
+    }
+
+    return {
+        showIncomeBar,
+        showExpensesBar
+    }
 }

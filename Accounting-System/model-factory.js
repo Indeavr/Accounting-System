@@ -1,7 +1,7 @@
 function modelFactory() {
     function createKnownExpense(type, category, amount, note) {
 
-        validator().validateKnownExpenses(type, category, amount, note)
+       // validator().validateKnownExpenses(type, category, amount, note)
 
         return {
             get type() {
@@ -35,8 +35,12 @@ function modelFactory() {
         //validator().validateBudget(type, category, amount, note)
 
         return {
-            salary,
-            payday,
+            get salary() {
+                return salary
+            },
+            get payday() {
+                return salary
+            },
             knownExpenses,
             savingGoals,
             amount: salary,
@@ -88,6 +92,4 @@ function modelFactory() {
         createExpense,
         createIncome
     }
-
-
 }

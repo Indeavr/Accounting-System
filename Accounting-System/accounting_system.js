@@ -1,5 +1,6 @@
 $(function () {
 
+    // -------- BUDGET FROM --------
     $('#continueToPartTwo').click(function () {
         container.formController.continueToPartTwo()
     })
@@ -34,7 +35,38 @@ $(function () {
         container.formController.submitBudget()
     })
 
-    // container.incomeController()
-    // container.expensesController()
-    // container.navbarController()
+
+    $('#submitExpense').click(function () {
+        container.expensesController.submitExpense()
+    })
+
+
+    $('#submitIncome').click(function () {
+        container.incomeController.submitIncome()
+    })
+
+    $("#addIncomeBtn").click(function () {
+        container.navbarController.showIncomeBar()
+    })
+
+    $("#addExpenseBtn").click(function () {
+        container.navbarController.showExpensesBar()
+    })
+
+
+    // ------ SidePanel ------
+    $("#callendarBtn").click(function () {
+        $(".callendar").toggle(200);
+    })
+
+    $('.dropdown-submenu a.submenuSwitch').click(function (e) {
+        container.sidepanelController.showSubmenu(e)
+    })
+
+    $(".dropdown-menu li a")
+        .hover(
+            container.sidepanelController.dropDownSubMenuMouseHoverIN,
+            container.sidepanelController.dropDownSubMenuMouseHoverOUT
+        )
+
 })

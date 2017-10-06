@@ -1,6 +1,6 @@
 const incomeControllerFunc = function (database, modelFactory) {
 
-    $('#submitIncome').click(function () {
+    function submitIncome() {
         let date = $('#showCallendarIncome')    // TODO: setup html
         let category = $("input[name = 'income-category-item']:checked").val()
         let amount = +$('#addMoney').val()
@@ -10,5 +10,9 @@ const incomeControllerFunc = function (database, modelFactory) {
         database.incomes.push(income)
 
         $('#addIncome').hide(200)
-    })
+    }
+
+    return {
+        submitIncome
+    }
 }
