@@ -33,6 +33,7 @@ $(function () {
 
     $('#budget-form-submit').click(function () {
         container.formController.submitBudget()
+        container.sidepanelController.visualizeCalendar()
     })
 
 
@@ -53,20 +54,9 @@ $(function () {
         container.navbarController.showExpensesBar()
     })
 
-
     // ------ SidePanel ------
     $("#callendarBtn").click(function () {
         $(".callendar").toggle(200);
     })
-
-    $('.dropdown-submenu a.submenuSwitch').click(function (e) {
-        container.sidepanelController.showSubmenu(e)
-    })
-
-    $(".dropdown-menu li a")
-        .hover(
-            container.sidepanelController.dropDownSubMenuMouseHoverIN,
-            container.sidepanelController.dropDownSubMenuMouseHoverOUT
-        )
 
 })
