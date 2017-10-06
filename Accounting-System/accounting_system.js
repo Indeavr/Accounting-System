@@ -1,6 +1,6 @@
 $(function () {
-
     // -------- BUDGET FROM --------
+
     $('#continueToPartTwo').click(function () {
         container.formController.continueToPartTwo()
     })
@@ -58,5 +58,4 @@ $(function () {
     $("#callendarBtn").click(function () {
         $(".callendar").toggle(200);
     })
-
 })

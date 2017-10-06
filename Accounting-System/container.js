@@ -8,7 +8,6 @@ const container = (function () {
     const navbarController = navbarControllerFunc(database2, modelFactory2)
     const sidepanelController = sidePanelControllerFunc(database2)
 
-
     return {
         formController,
         expensesController,
