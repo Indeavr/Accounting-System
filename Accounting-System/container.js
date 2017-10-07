@@ -8,8 +8,6 @@ const container = (function () {
     const navbarController = navbarControllerFunc(database2, modelFactory2)
     const sidepanelController = sidePanelControllerFunc(database2)
 
-
-
     const ajaxProvider = ajaxModule()
     const currencyHandler = currencyHandlerFunc(database2)
 
