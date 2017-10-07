@@ -8,9 +8,11 @@ const container = (function () {
     const navbarController = navbarControllerFunc(database2, modelFactory2)
     const sidepanelController = sidePanelControllerFunc(database2)
 
-    const expenseChartLoad = expenseChartLoadFunc()
-    const incomesBarChartLoad = incomesBarChartLoadFunc()
+    const expenseChartLoad = expenseChartLoadFunc(database2)
+    const incomesBarChartLoad = incomesBarChartLoadFunc(database2)
 
+    const ajaxProvider = ajaxModule()
+    const currencyHandler = currencyHandlerFunc(database2)
 
     return {
         formController,
@@ -19,6 +21,8 @@ const container = (function () {
         navbarController,
         sidepanelController,
         expenseChartLoad,
-        incomesBarChartLoad
+        incomesBarChartLoad,
+        ajaxProvider,
+        currencyHandler
     }
 }())

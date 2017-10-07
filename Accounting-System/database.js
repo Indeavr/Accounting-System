@@ -2,6 +2,7 @@ const database = function () {
     return {
         incomes: [],
         expenses: [],
-        budget: {}
+        budget: {},
+        currency: 'USD'
     }
 }

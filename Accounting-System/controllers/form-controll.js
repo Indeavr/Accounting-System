@@ -1,8 +1,9 @@
 const formControllerFunc = function (database, modelFactory) {
     let salary
     let expenses = []
-    let savingGoals
+    let savingGoals = []
     let sumOfExpenses = 0
+    let sumOfSavings = 0
 
     //for the initial budget form --> expense form
 
@@ -54,7 +55,7 @@ const formControllerFunc = function (database, modelFactory) {
     }
 
     function getPercentOfProgress() {
-        return ((sumOfExpenses / salary) * 100)
+        return ((sumOfExpenses + sumOfSavings) / salary) * 100
     }
 
 
@@ -65,7 +66,8 @@ const formControllerFunc = function (database, modelFactory) {
 
         expenses.push(expense)
 
-        if (sumOfExpenses > salary) {
+
+        if (sumOfSavings + sumOfExpenses > salary) {
             sumOfExpenses -= expense.amount
             alert('You reached the limit of your expenses!')
         }
@@ -109,8 +111,28 @@ const formControllerFunc = function (database, modelFactory) {
 
 
     function submitSavings() {
-        savingGoals = getSavings()
-        $('#savings-form').hide(300)
+        let saving = getSavings()
+
+        sumOfSavings += saving.amount
+
+        savingGoals.push(saving)
+
+        if (sumOfSavings + sumOfExpenses > salary) {
+            sumOfSavings -= saving.amount
+            alert('You reached the limit of your expenses!')
+        }
+        else {
+            updateFormSaving(sumOfSavings)
+
+            $('#savings-form').hide(300)
+        }
+    }
+
+    function updateFormSaving(sumOfSavings) {
+        $('.counter-savings').val(sumOfSavings)
+        $('#expense-progress').attr({
+            'style': 'width:' + getPercentOfProgress() + '%'
+        })
     }
 
     let getSavings = function () {
@@ -124,16 +146,16 @@ const formControllerFunc = function (database, modelFactory) {
 
     function submitBudget() {
 
-        let initialBudget = +calculateInitialBudget(salary, expenses, savingGoals.amount)
+        let initialBudget = +calculateInitialBudget(salary)
 
-        database.budget.expenses = expenses
+        database.budget.knownExpenses = expenses
         database.expenses.push(expenses)
         database.budget.savingGoals = savingGoals
         database.budget.amount = initialBudget
         database.budget.moneyLeft = initialBudget
 
         console.log(database.expenses)
-        console.log(database.budget.expenses)
+        console.log(database.budget.knownExpenses)
         console.log(database.budget.savingGoals)
         console.log(database.budget.amount)
         console.log(database.budget.moneyLeft)
@@ -146,6 +168,8 @@ const formControllerFunc = function (database, modelFactory) {
         $("#myNavbar").removeAttr("hidden");
         $("#myNavbar").attr("class", "navbar-collapse collapse")
        
+        $("#myNavbar").attr("class", "navbar-collapse collapse").removeAttr("hidden");
+       
         $("#sidepanel").show(200);
         $('#budget-progressbar').show()
         $('.main-content').show()
@@ -154,12 +178,7 @@ const formControllerFunc = function (database, modelFactory) {
     }
 
     let calculateInitialBudget = function (salaryInput, expensesInput, savingsInput) {
-        let expensessum = 0
-        for (let i = 0; i < expensesInput.length; i++) {
-            expensessum += expensesInput[i].amount
-        }
-
-        return salaryInput - expensessum - savingsInput
+        return salaryInput - sumOfExpenses - sumOfSavings
     }
 
     function vizualiseInitialBudgetProgressBar() {

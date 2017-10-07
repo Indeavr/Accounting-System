@@ -1,4 +1,4 @@
-let incomesBarChartLoadFunc = function () {
+let incomesBarChartLoadFunc = function (database) {
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
@@ -17,7 +17,7 @@ let incomesBarChartLoadFunc = function () {
             december = 2750;
 
 
-        var incomeData = google.visualization.arrayToDataTable([
+        let incomeData = google.visualization.arrayToDataTable([
             ['Category', 'Income'],
             ['January', january],
             ['February', february],
@@ -33,9 +33,9 @@ let incomesBarChartLoadFunc = function () {
             ['December', december]
         ]);
 
-        var options = {'title': 'Income for 2017'};
+        let options = {'title': 'Income for 2017'};
 
-        var chart = new google.visualization.BarChart(document.getElementById('barchart'));
+        let chart = new google.visualization.BarChart(document.getElementById('barchart'));
         chart.draw(incomeData, options);
     }
     return drawChart
