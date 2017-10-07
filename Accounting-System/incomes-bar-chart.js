@@ -1,4 +1,4 @@
-let loadBarchart = function () {
+let incomesBarChartLoadFunc = function () {
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
@@ -38,4 +38,5 @@ let loadBarchart = function () {
         var chart = new google.visualization.BarChart(document.getElementById('barchart'));
         chart.draw(incomeData, options);
     }
+    return drawChart
 }

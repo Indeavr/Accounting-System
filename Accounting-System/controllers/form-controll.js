@@ -145,8 +145,7 @@ const formControllerFunc = function (database, modelFactory) {
         $(".wrap-budget-form").hide();
         $("#myNavbar").removeAttr("hidden");
         $("#myNavbar").attr("class", "navbar-collapse collapse")
-        loadPiechart();
-        loadBarchart();
+       
         $("#sidepanel").show(200);
         $('#budget-progressbar').show()
         $('.main-content').show()

@@ -39,11 +39,13 @@ $(function () {
 
     $('#submitExpense').click(function () {
         container.expensesController.submitExpense()
+        container.expenseChartLoad.drawChart()
     })
 
 
     $('#submitIncome').click(function () {
         container.incomeController.submitIncome()
+        container.incomesBarChartLoad.drawChart()
     })
 
     $("#addIncomeBtn").click(function () {
