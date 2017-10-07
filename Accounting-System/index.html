@@ -39,9 +39,26 @@
                         <h1 class="navbar-brand" id="reloadPage">Accounting System</h1>
                     </div>
                     <div class="navbar-collapse" id="myNavbar" hidden>
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav" id="main-nav-ul">
                             <li><a href="#" id="addIncomeBtn">Add income</a></li>
                             <li><a href="#" id="addExpenseBtn">Add expense</a></li>
+
+                            <li id="currency">
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button"
+                                            data-toggle="dropdown">
+                                        Change Currency
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul id="currency-dropdown" class="dropdown-menu">
+                                        <li><a href="#" class="currency-item">EUR</a></li>
+                                        <li><a href="#" class="currency-item">BGN</a></li>
+                                        <li><a href="#" class="currency-item">USD</a></li>
+                                        <li><a href="#" class="currency-item">GBP</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
@@ -118,6 +135,17 @@
                             <label class="budget-form-label" id="salary">Salary:</label>
                             <input type="text" name="salary-budget" id="salary-budget" class="form-control"
                                    required pattern="/^\d+(?:\.\d{0,2})$/" placeholder="Specify your salary in $">
+                        </div>
+                        <div class="form-inline">
+                            <label class="control-label" for="selectbasic">Choose currency</label>
+                            <div class="">
+                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                    <option value="EUR">EUR</option>
+                                    <option value="BGN">BGN</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-inline">
                             <label class="budget-form-label" id="payday">Payday:</label>
@@ -305,8 +333,10 @@
                         </div>
                         <!---->
                         <div>
-                            <div class="wrap">
-
+                            <div class="wrap" id="savings-goal-wrapper">
+                                <div class="savings-info">
+                                    Savings Amount: <br> <span class="counter-savings">0</span>
+                                </div>
 
                                 <button id="addSavingGoal-btn" type="button" class="btn btn-primary">
                                     Add Savings Goal
@@ -667,10 +697,12 @@
 <script type="text/javascript" src="accounting_system.js"></script>
 <script type="text/javascript" src="controllers/form-controll.js"></script>
 <script type="text/javascript" src="controllers/navbar.js"></script>
+
+<script src="ajax-provider.js"></script>
+<script src="currencyHandler.js"></script>
 <script src="controllers/expenses.js"></script>
 <script src="controllers/income.js"></script>
 <script src="container.js"></script>
-
 
 </body>
 </html>

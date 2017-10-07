@@ -73,6 +73,11 @@ table {
     cursor: pointer;
 }
 
+#currency{
+    margin-top:12px;
+    padding-left:10px;
+}
+
 /*Koleto: End of Collapsable Add income and Add Expense forms*/
 
 /*_________________MAIN______________*/
@@ -195,6 +200,13 @@ table {
     margin-right: auto;
     height: 31px;
 }
+
+.savings-info{
+    display: inline-block;
+    margin-right:20px;
+}
+
+#savings-goal-wrapper{}
 
 /*----------> Main Section <-----------*/
 #budget-progressbar {
