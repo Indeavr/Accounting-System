@@ -1,7 +1,7 @@
 const expensesControllerFunc = function (database, modelFactory) {
     function submitExpense() {
         let date = $('#selectDateExpense-budget').val();  //TODO: setup html
-        let category = $('input[optradio]:checked').text();
+        let category = $('input:radio[name=optradio]:checked').val();
         let amount = +$('#subtractMoney').val();
         let note = $('subtractMoneyNote-budget').val();
 
