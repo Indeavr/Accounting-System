@@ -10,9 +10,11 @@ const container = (function () {
 
     const expenseChartLoad = expenseChartLoadFunc(database2)
     const incomesBarChartLoad = incomesBarChartLoadFunc(database2)
-
+    
     const ajaxProvider = ajaxModule()
     const currencyHandler = currencyHandlerFunc(database2)
+
+    const refreshTopStatistics = refreshTopStatisticsFunc(database2)
 
     return {
         formController,
@@ -23,6 +25,7 @@ const container = (function () {
         expenseChartLoad,
         incomesBarChartLoad,
         ajaxProvider,
-        currencyHandler
+        currencyHandler,
+        refreshTopStatistics
     }
 }())

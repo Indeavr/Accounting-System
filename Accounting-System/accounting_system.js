@@ -1,6 +1,7 @@
 $(function () {
     // -------- BUDGET FROM --------
 
+    
     $('#continueToPartTwo').click(function () {
         container.formController.continueToPartTwo()
     })
@@ -35,12 +36,14 @@ $(function () {
         container.formController.submitBudget()
         container.sidepanelController.visualizeCalendar()
         container.currencyHandler.generateCurrencyChangeMenu()
+        container.refreshTopStatistics() //refresher
     })
 
 
     $('#submitExpense').click(function () {
         container.expensesController.submitExpense()
         container.expenseChartLoad.drawChart(database)
+        container.refreshTopStatistics() //refresher
     })
 
 
@@ -76,6 +79,7 @@ $(function () {
 
         container.ajaxProvider.changeCurrencry(updateToDesired, clickedCurrency)
         container.currencyHandler.updateDatabase(clickedCurrency)
+        container.refreshTopStatistics() //refresher
     })
 
 
