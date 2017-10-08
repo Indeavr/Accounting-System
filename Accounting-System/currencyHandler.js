@@ -39,12 +39,6 @@ const currencyHandlerFunc = function (database) {
                 database.incomes[i].amount /= data.rate
             }
 
-            if (database.expenses[0].length > 0 && database.expenses[0][0] !== NaN){
-                for (let i = 0; i < database.expenses[0].length; i++){
-                    database.expenses[0][i].amount /= data.rate
-                }
-            }
-
             for (let i = 1; i < database.expenses.length; i++){
                 database.expenses[i].amount /= data.rate
             }
@@ -75,12 +69,6 @@ const currencyHandlerFunc = function (database) {
 
             for (let i = 0; i < database.incomes.length; i++) {
                 database.incomes[i].amount *= data.rate
-            }
-
-            if (database.expenses[0].length > 0 && database.expenses[0][0] !== NaN) {
-                for (let i = 0; i < database.expenses[0].length; i++) {
-                    database.expenses[0][i].amount /= data.rate
-                }
             }
 
             for (let i = 1; i < database.expenses.length; i++) {

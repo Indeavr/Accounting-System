@@ -7,4 +7,16 @@
         margin: 0 auto;
 
     }
+
+    #selectbasic{
+        display: inline-block;
+        width: auto;
+    }
 }
+@media (max-width: 380px) {
+    #salary-budget,
+    #payday-budget{
+        width:190px;
+    }
+}
+

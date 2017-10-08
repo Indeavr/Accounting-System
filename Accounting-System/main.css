@@ -321,6 +321,20 @@ table {
 /*---------->Qick View Section <----------*/
 
 /*________________FOOTER_______________*/
+footer{
+    background-color:#21150f;
+    height: 60px;
+    display: flex;
+
+}
+
+#devInfo{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+
 
 
 

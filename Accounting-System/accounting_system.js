@@ -26,7 +26,6 @@ $(function () {
 
     $('#submit-savings').click(function () {
         container.formController.submitSavings()
-        container.formController.updateProgress()
     })
 
     $('#cancelSubmit-savings').click(function () {

@@ -1,5 +1,5 @@
 const formControllerFunc = function (database, modelFactory) {
-    let salary
+    let salary = 0
     let expenses = []
     let savingGoals = []
     let sumOfExpenses = 0
@@ -39,6 +39,8 @@ const formControllerFunc = function (database, modelFactory) {
                 updateProgress()
 
                 //console.log('TRIMED: ' + `${typeof salaryTrimed}`)
+                salary = undefined
+                salary = salaryTrimed
                 let budget = modelFactory.createBudget(salaryTrimed, payday, [], {})
                 database.budget = budget
 
@@ -68,13 +70,13 @@ const formControllerFunc = function (database, modelFactory) {
             let note = $('#subtractMoneyNote-budget').val()
 
             switch (type) {
-                case 'Week':
+                case 'week':
                     amount *= 4
                     break
-                case 'Daily':
+                case 'daily':
                     amount *= 30
                     break
-                case 'Year':
+                case 'year':
                     amount /= 12
                     break
             }
@@ -82,15 +84,18 @@ const formControllerFunc = function (database, modelFactory) {
             return modelFactory.createKnownExpense(type, category, amount, note)
         }())
 
-        sumOfExpenses += expense.amount
-
-        expenses.push(expense)
+        console.log(typeof database.budget.salary)
 
 
-        let validAmount = checkAmountOfSalaryLeft(sumOfSavings, expense)
+        let validAmount = checkAmountOfSalaryLeft(sumOfSavings + expense.amount, expense)
 
         if (validAmount) {
+            sumOfExpenses += expense.amount
+            expenses.push(expense)
+            updateProgress()
+
             updateExpenseInfoVizualisation()
+            $('#savings-form-money').val('')
             $('#add-known-expense').hide(300)
         }
 
@@ -111,23 +116,23 @@ const formControllerFunc = function (database, modelFactory) {
             return modelFactory.createSavingGoals(amount, note)
         }())
 
-        sumOfSavings += saving.amount
-
-        savingGoals.push(saving)
-
-        let validAmount = checkAmountOfSalaryLeft(sumOfSavings, saving)
+        let validAmount = checkAmountOfSalaryLeft(sumOfSavings + saving.amount, saving)
 
         if (validAmount) {
+            sumOfSavings += saving.amount
+            savingGoals.push(saving)
+            updateProgress()
+
             $('.counter-savings').text(sumOfSavings)
+            $('#subtractMoney-budget').val('')
             $('#savings-form').hide(300)
         }
         console.log(savingGoals)
     }
 
 
-    function checkAmountOfSalaryLeft(sumOf, expenseOrSaving) {
-        if (sumOfSavings + sumOfExpenses > salary) {
-            sumOf -= expenseOrSaving.amount
+    function checkAmountOfSalaryLeft(newBonus, expenseOrSavingAdded) {
+        if (sumOfSavings + sumOfExpenses + newBonus > database.budget.salary) {
             alert('You reached the limit of your expenses!')
             return false
         }
