@@ -12,6 +12,7 @@ $(function () {
 
     $('#submitExpense-budget').click(function () {
         container.formController.submitExpenseBudget()
+        container.formController.updateProgress()
     })
 
     $('#cancelExpenseSubmit-budget').click(function () {
@@ -25,6 +26,7 @@ $(function () {
 
     $('#submit-savings').click(function () {
         container.formController.submitSavings()
+        container.formController.updateProgress()
     })
 
     $('#cancelSubmit-savings').click(function () {
@@ -35,7 +37,7 @@ $(function () {
     $('#budget-form-submit').click(function () {
         container.formController.submitBudget()
         container.sidepanelController.visualizeCalendar()
-        container.currencyHandler.generateCurrencyChangeMenu()
+       // container.currencyHandler.generateCurrencyChangeMenu()
         container.refreshTopStatistics() //refresher
     })
 
@@ -78,8 +80,7 @@ $(function () {
         let updateToDesired = container.currencyHandler.updateCurrency
 
         container.ajaxProvider.changeCurrencry(updateToDesired, clickedCurrency)
-        container.currencyHandler.updateDatabase(clickedCurrency)
-        container.refreshTopStatistics() //refresher
+        //refresher
     })
 
 

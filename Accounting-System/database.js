@@ -3,6 +3,6 @@ const database = function () {
         incomes: [],
         expenses: [],
         budget: {},
-        currency: 'USD'
+        currency: ''
     }
 }

@@ -40,7 +40,7 @@ function modelFactory() {
             knownExpenses,
             savingGoals,
             amount: salary,
-            moneyLeft: salary
+            moneySpent: 0
         }
     }
 

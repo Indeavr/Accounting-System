@@ -72,6 +72,7 @@ const refreshTopStatisticsFunc = function (database) {
         }
     
         function refreshTopStatistics(currencyMultiplyer) {
+            console.log(database.budget.salary)
             $("#salaryDisplay").text(database.budget.salary);
             
             (function(){

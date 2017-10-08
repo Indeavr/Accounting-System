@@ -8,20 +8,23 @@ const expensesControllerFunc = function (database, modelFactory) {
         let expense = modelFactory.createExpense(date, category, amount, note)
         database.expenses.push(expense)
 
-        calculateBudget(expense.amount)
+        if(database.budget.moneySpent + expense >= database.budget.amount){
+            // TODO: alert that you crossed the budget
+        }
+        else{
+            database.budget.moneySpent += expense.amount
+            calculateBudget()
+            $('#subtractMoney').empty()
+        }
 
         $('#addExpense').hide(200)
     }
 
 
-    function calculateBudget(expense) {
-        database.budget.moneyLeft -= expense
+    function calculateBudget() {
+        let percent = (database.budget.moneySpent * 100) / database.budget.amount
 
-        let percent = (database.budget.amount / database.budget.moneyLeft ) * 100
-
-        $('#budget-progress').attr({
-            'style': 'width' + percent + '%'
-        })
+        $('#budget-progress').width(percent + '%' )
     }
 
     return{

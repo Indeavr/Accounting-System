@@ -10,7 +10,7 @@ const ajaxModule = function () {
         }
 
         function getcurrency(data) {
-            return data.rates[currency]
+            return {currency, rate:data.rates[currency]}
         }
 
         firstPromise().then(getcurrency).then(callback)
