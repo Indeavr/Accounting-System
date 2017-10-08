@@ -46,6 +46,7 @@ $(function () {
         container.expensesController.submitExpense()
         container.expenseChartLoad.drawChart(database)
         container.refreshTopStatistics() //refresher
+        container.historyTableLoad.addRow()
     })
 
 

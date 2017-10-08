@@ -10,6 +10,8 @@ const container = (function () {
 
     const expenseChartLoad = expenseChartLoadFunc(database2)
     const incomesBarChartLoad = incomesBarChartLoadFunc(database2)
+
+    const historyTableLoad = historyTableLoadFunc(database2)
     
     const ajaxProvider = ajaxModule()
     const currencyHandler = currencyHandlerFunc(database2)
@@ -26,6 +28,7 @@ const container = (function () {
         incomesBarChartLoad,
         ajaxProvider,
         currencyHandler,
-        refreshTopStatistics
+        refreshTopStatistics,
+        historyTableLoad
     }
 }())

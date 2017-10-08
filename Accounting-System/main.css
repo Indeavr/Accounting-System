@@ -219,6 +219,19 @@ table {
     color: #000;
 }
 
+#myTableData{
+    margin: 10px;
+    border: 2px solid black;
+    
+    border-radius: 5px;
+}
+
+#myTableData td{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
 #piechart {
     width: 550px;
     height: 400px;
