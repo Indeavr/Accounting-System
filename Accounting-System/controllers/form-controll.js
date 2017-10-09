@@ -173,6 +173,7 @@ const formControllerFunc = function (database, modelFactory) {
         $("#sidepanel").show(200);
         $('#budget-progressbar').show()
         $('.main-content').show()
+        generateFooter()
 
         //console.log(database.budget.salary)
         // console.log(database.budget)
@@ -183,6 +184,13 @@ const formControllerFunc = function (database, modelFactory) {
         // console.log(database.budget.moneySpent)
     }
 
+    function generateFooter() {
+
+        $('footer')
+            .css('display', 'block')
+            .append('<section id="devInfo"> Made by: <br> Nikola Stanoychev, Simeon Darakchiev, Martin Donevski</section>')
+    }
+    
     //koleto
     //payday end of the month checkbox
     $("#monthEndDateCheckBox").change(function () {
