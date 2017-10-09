@@ -82,6 +82,7 @@ const currencyHandlerFunc = function (database) {
         }(data.currency))
 
         container.refreshTopStatistics()
+
     }
 
 
