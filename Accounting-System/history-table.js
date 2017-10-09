@@ -1,7 +1,7 @@
 const historyTableLoadFunc = function (database) {
     function addRow() {
 
-       
+
         let date = $("#showCallendarExpense").val();
         let amount = +$('#subtractMoney').val()
         let category = $("input[name=optradio]:checked").val()
@@ -17,6 +17,7 @@ const historyTableLoadFunc = function (database) {
         row.insertCell(2).innerHTML = category;
         row.insertCell(3).innerHTML = note;
     }
+
     return {
         addRow
     }

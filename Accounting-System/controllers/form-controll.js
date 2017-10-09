@@ -175,14 +175,6 @@ const formControllerFunc = function (database, modelFactory) {
         $('#budget-progressbar').show()
         $('.main-content').show()
         generateFooter()
-
-        //console.log(database.budget.salary)
-        // console.log(database.budget)
-        // console.log(database.expenses)
-        // console.log(database.budget.knownExpenses)
-        // console.log(database.budget.savingGoals)
-        // console.log(database.budget.amount)
-        // console.log(database.budget.moneySpent)
     }
 
     function generateFooter() {
@@ -191,7 +183,7 @@ const formControllerFunc = function (database, modelFactory) {
             .css('display', 'block')
             .append('<section id="devInfo"> Made by: <br> Nikola Stanoychev, Simeon Darakchiev, Martin Donevski</section>')
     }
-    
+
     //koleto
     //payday end of the month checkbox
     $("#monthEndDateCheckBox").change(function () {
@@ -222,15 +214,15 @@ const formControllerFunc = function (database, modelFactory) {
         }
     });
 
-    function textInButtonHandler ($setCategory, $btnLabel, $otherField){
+    function textInButtonHandler($setCategory, $btnLabel, $otherField) {
         if ($setCategory.is(":checked") === false) {
             $setCategory.filter("[value=Miscellaneous]").prop("checked", true);
             $btnLabel.text("default: Miscellaneous");
         }
-    
+
         $setCategory.change(function () {
             $btnLabel.text($(this).attr("value"));
-            
+
             if ($(this).attr("value") === "Other") {
                 $otherField.prop("disabled", false);
             } else {
@@ -238,22 +230,22 @@ const formControllerFunc = function (database, modelFactory) {
             }
         });
     }
-    
-    (function(){
+
+    (function () {
         let $setCategory = $('input:radio[name=knownExpenseCategory]');
         let $btnLabel = $("#selectIncome-budget-label")
         let $otherField = $("#otherExpenseCategory-budget")
         textInButtonHandler($setCategory, $btnLabel, $otherField)
     })();
-    
-    (function(){
+
+    (function () {
         let $setCategory = $('input:radio[name=income-category-item]');
         let $btnLabel = $("#selectIncome")
         let $otherField = $("#otherIncomeCategory")
         textInButtonHandler($setCategory, $btnLabel, $otherField)
     })();
 
-    (function(){
+    (function () {
         let $setCategory = $('input:radio[name=optradio]');
         let $btnLabel = $("#selectExpense")
         let $otherField = $("#otherExpenseCategory")

@@ -12,7 +12,7 @@ const container = (function () {
     const incomesBarChartLoad = incomesBarChartLoadFunc(database2)
 
     const historyTableLoad = historyTableLoadFunc(database2)
-    
+
     const ajaxProvider = ajaxModule()
     const currencyHandler = currencyHandlerFunc(database2)
 

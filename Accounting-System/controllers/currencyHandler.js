@@ -22,24 +22,24 @@ const currencyHandlerFunc = function (database) {
 
     function convertToBaseEUR(data) {
 
-        if(database.currency !== 'EUR'){
+        if (database.currency !== 'EUR') {
             database.budget.salary /= data.rate
             database.budget.amount /= data.rate
             database.budget.moneyLeft /= data.rate
 
-            for(let i = 0; i < database.budget.knownExpenses.length; i++){
+            for (let i = 0; i < database.budget.knownExpenses.length; i++) {
                 database.budget.knownExpenses[i].amount /= data.rate
             }
 
-            for(let i = 0; i < database.budget.savingGoals.length; i++){
+            for (let i = 0; i < database.budget.savingGoals.length; i++) {
                 database.budget.savingGoals[i].amount /= data.rate
             }
 
-            for (let i = 0; i < database.incomes.length; i++){
+            for (let i = 0; i < database.incomes.length; i++) {
                 database.incomes[i].amount /= data.rate
             }
 
-            for (let i = 1; i < database.expenses.length; i++){
+            for (let i = 1; i < database.expenses.length; i++) {
                 database.expenses[i].amount /= data.rate
             }
         }
@@ -53,7 +53,7 @@ const currencyHandlerFunc = function (database) {
     }
 
     function updateCurrency(data) {
-        if(data.rate !== undefined) {
+        if (data.rate !== undefined) {
 
             database.budget.salary *= data.rate
             database.budget.amount *= data.rate

@@ -8,15 +8,16 @@
 
     }
 
-    #selectbasic{
+    #selectbasic {
         display: inline-block;
         width: auto;
     }
 }
+
 @media (max-width: 380px) {
     #salary-budget,
-    #payday-budget{
-        width:190px;
+    #payday-budget {
+        width: 190px;
     }
 }
 

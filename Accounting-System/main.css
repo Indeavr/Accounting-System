@@ -73,9 +73,9 @@ table {
     cursor: pointer;
 }
 
-#currency{
-    margin-top:12px;
-    padding-left:10px;
+#currency {
+    margin-top: 12px;
+    padding-left: 10px;
 }
 
 /*Koleto: End of Collapsable Add income and Add Expense forms*/
@@ -201,12 +201,13 @@ table {
     height: 31px;
 }
 
-.savings-info{
+.savings-info {
     display: inline-block;
-    margin-right:20px;
+    margin-right: 20px;
 }
 
-#savings-goal-wrapper{}
+#savings-goal-wrapper {
+}
 
 /*----------> Main Section <-----------*/
 #budget-progressbar {
@@ -219,14 +220,14 @@ table {
     color: #000;
 }
 
-#myTableData{
+#myTableData {
     margin: 10px;
     border: 2px solid black;
-    
+
     border-radius: 5px;
 }
 
-#myTableData td{
+#myTableData td {
     border: 2px solid black;
     padding: 10px;
     text-align: center;
@@ -246,7 +247,7 @@ table {
 #budget-pg-total {
     color: #000;
     font-size: 22px;
-    font-family:Consolas, sans-serif;
+    font-family: Consolas, sans-serif;
 }
 
 #budget-pg-current {
@@ -278,8 +279,6 @@ table {
 .account-info ul li {
     display: flex;
 }
-
-
 
 /*---------->Qick View Section <----------*/
 /* navigation */
@@ -321,14 +320,14 @@ table {
 /*---------->Qick View Section <----------*/
 
 /*________________FOOTER_______________*/
-footer{
-    background-color:#21150f;
+footer {
+    background-color: #21150f;
     height: 60px;
     display: flex;
 
 }
 
-#devInfo{
+#devInfo {
     color: #ffffff;
     display: flex;
     justify-content: center;

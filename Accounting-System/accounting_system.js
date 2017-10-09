@@ -1,7 +1,7 @@
 $(function () {
     // -------- BUDGET FROM --------
 
-    
+
     $('#continueToPartTwo').click(function () {
         container.formController.continueToPartTwo()
     })
@@ -36,7 +36,7 @@ $(function () {
     $('#budget-form-submit').click(function () {
         container.formController.submitBudget()
         container.sidepanelController.visualizeCalendar()
-       // container.currencyHandler.generateCurrencyChangeMenu()
+        // container.currencyHandler.generateCurrencyChangeMenu()
         container.refreshTopStatistics() //refresher
     })
 

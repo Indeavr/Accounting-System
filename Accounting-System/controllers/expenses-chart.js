@@ -1,5 +1,5 @@
 const expenseChartLoadFunc = function (database) {
-    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
     let taxes = 0
@@ -17,7 +17,7 @@ const expenseChartLoadFunc = function (database) {
     let schoolChildcare = 0;
 
     function drawChart() {
-        
+
         let category = $("input[name=optradio]:checked").val()
         let amount = +$('#subtractMoney').val()
 
