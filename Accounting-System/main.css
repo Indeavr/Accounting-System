@@ -245,6 +245,8 @@ table {
 #budget-pg-current,
 #budget-pg-total {
     color: #000;
+    font-size: 22px;
+    font-family:Consolas, sans-serif;
 }
 
 #budget-pg-current {
@@ -277,9 +279,7 @@ table {
     display: flex;
 }
 
-.info-item {
 
-}
 
 /*---------->Qick View Section <----------*/
 /* navigation */

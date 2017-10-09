@@ -95,15 +95,14 @@ const formControllerFunc = function (database, modelFactory) {
             updateProgress()
 
             updateExpenseInfoVizualisation()
-            $('#savings-form-money').val('')
             $('#add-known-expense').hide(300)
         }
 
         function updateExpenseInfoVizualisation() {
             $('#expenses-span').text(sumOfExpenses)
             $('.counter').text(expenses.length)
-            $('#subtractMoneyNote-budget').empty()
-            $('#subtractMoney-budget').empty()
+            $('#subtractMoney-budget').val('')
+            $('#subtractMoneyNote-budget').val('')
         }
     }
 
@@ -125,6 +124,8 @@ const formControllerFunc = function (database, modelFactory) {
 
             $('.counter-savings').text(sumOfSavings)
             $('#subtractMoney-budget').val('')
+            $('#savings-form-money').val('')
+            $('#savings-form-note').val('')
             $('#savings-form').hide(300)
         }
         console.log(savingGoals)

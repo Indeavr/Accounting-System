@@ -541,13 +541,14 @@
                         </div>
                         <div class="col-xs-12">
                             <div class="budget-section">
+                                BUDGET STATUS:
+                                <span id="budget-pg-current"></span> spent / from
+                                <span id="budget-pg-total"></span>
                                 <div class="progress" id="budget-progressbar" hidden>
                                     <div id="budget-progress" class="progress-bar progress-bar-success"
                                          role="progressbar"
                                          aria-valuenow="40"
                                          aria-valuemin="0" aria-valuemax="100" style="width:0%">
-                                        <span id="budget-pg-current">20</span>
-                                        <span id="budget-pg-total">100</span>
                                     </div>
                                 </div>
                             </div>
@@ -688,10 +689,10 @@
 <script type="text/javascript" src="controllers/form-controll.js"></script>
 <script type="text/javascript" src="controllers/navbar.js"></script>
 <script type="text/javascript" src="ajax-provider.js"></script>
-<script type="text/javascript" src="currencyHandler.js"></script>
+<script type="text/javascript" src="controllers/currencyHandler.js"></script>
 <script type="text/javascript" src="controllers/expenses.js"></script>
 <script type="text/javascript" src="controllers/income.js"></script>
-<script type="text/javascript" src="topStatistics.js"></script>
+<script type="text/javascript" src="controllers/topStatistics.js"></script>
 <script type="text/javascript" src="container.js"></script>
 
 </body>
