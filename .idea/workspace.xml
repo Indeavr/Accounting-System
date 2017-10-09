@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76e5b3ac-8e70-47a9-b94f-92c03bd7bda8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/accounting_system.js" afterPath="$PROJECT_DIR$/Accounting-System/accounting_system.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/ajax-provider.js" afterPath="$PROJECT_DIR$/Accounting-System/ajax-provider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/container.js" afterPath="$PROJECT_DIR$/Accounting-System/container.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/controllers/currencyHandler.js" afterPath="$PROJECT_DIR$/Accounting-System/controllers/currencyHandler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js" afterPath="$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/controllers/expenses.js" afterPath="$PROJECT_DIR$/Accounting-System/controllers/expenses.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/controllers/form-controll.js" afterPath="$PROJECT_DIR$/Accounting-System/controllers/form-controll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/controllers/topStatistics.js" afterPath="$PROJECT_DIR$/Accounting-System/controllers/topStatistics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/history-table.js" afterPath="$PROJECT_DIR$/Accounting-System/history-table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/index.html" afterPath="$PROJECT_DIR$/Accounting-System/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/main.css" afterPath="$PROJECT_DIR$/Accounting-System/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/media.css" afterPath="$PROJECT_DIR$/Accounting-System/media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounting-System/controllers/income.js" afterPath="$PROJECT_DIR$/Accounting-System/controllers/income.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,34 +20,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ajax-provider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/ajax-provider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="expenses.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/expenses.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="304">
+              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="currencyHandler.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/currencyHandler.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Accounting-System/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+            <state relative-caret-position="290">
+              <caret line="548" column="76" lean-forward="true" selection-start-line="548" selection-start-column="76" selection-end-line="548" selection-end-column="76" />
               <folding>
-                <element signature="n#!!block;n#generateCurrencyChangeMenu#0;n#!!block;n#currencyHandlerFunc#0;n#currencyHandlerFunc#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="expenses-chart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-551">
+              <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,42 +55,8 @@
       <file leaf-file-name="income.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/income.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topStatistics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/topStatistics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="121" column="35" lean-forward="false" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
-              <folding>
-                <element signature="n#!!block;n#createTopStatistics#0;n#!!block;n#execute#0;n#!!block;n#refreshTopStatisticsFunc#0;n#refreshTopStatisticsFunc#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#refreshTopStatistics#0;n#!!block;n#execute#0;n#!!block;n#refreshTopStatisticsFunc#0;n#refreshTopStatisticsFunc#0;n#!!top" expanded="false" />
-                <element signature="e#4233#4301#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidepanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/sidepanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/navbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="190">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,8 +65,8 @@
       <file leaf-file-name="container.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accounting-System/container.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+            <state relative-caret-position="209">
+              <caret line="11" column="66" lean-forward="true" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
               <folding>
                 <marker date="1507538383410" expanded="true" signature="1141:1147" ph="{&quot;formController&quot;: formController...}" />
               </folding>
@@ -115,21 +74,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history-table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/history-table.js">
+      <file leaf-file-name="accounting_system.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Accounting-System/accounting_system.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="309">
+              <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounting-System/database.js">
+      <file leaf-file-name="sidepanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/sidepanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="285">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -147,9 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>continueToPartTwo</find>
-      <find>salary-budget</find>
-      <find>payday-budget</find>
       <find>budget-form-submit</find>
       <find>addExpense-btn</find>
       <find>subtractMoneyNote-budget</find>
@@ -177,6 +133,9 @@
       <find>budget-pg-current</find>
       <find>budget-pg-total</find>
       <find>savings-form-money</find>
+      <find>expenseChartLoadFunc</find>
+      <find>optradio</find>
+      <find>subtractMoney</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -203,19 +162,19 @@
         <option value="$PROJECT_DIR$/Accounting-System/model-factory.js" />
         <option value="$PROJECT_DIR$/Accounting-System/topStatistics.js" />
         <option value="$PROJECT_DIR$/Accounting-System/currencyHandler.js" />
-        <option value="$PROJECT_DIR$/Accounting-System/controllers/income.js" />
         <option value="$PROJECT_DIR$/Accounting-System/ajax-provider.js" />
-        <option value="$PROJECT_DIR$/Accounting-System/accounting_system.js" />
         <option value="$PROJECT_DIR$/Accounting-System/controllers/form-controll.js" />
         <option value="$PROJECT_DIR$/Accounting-System/controllers/currencyHandler.js" />
         <option value="$PROJECT_DIR$/Accounting-System/controllers/topStatistics.js" />
-        <option value="$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js" />
         <option value="$PROJECT_DIR$/Accounting-System/media.css" />
-        <option value="$PROJECT_DIR$/Accounting-System/main.css" />
         <option value="$PROJECT_DIR$/Accounting-System/index.html" />
         <option value="$PROJECT_DIR$/Accounting-System/history-table.js" />
         <option value="$PROJECT_DIR$/Accounting-System/container.js" />
+        <option value="$PROJECT_DIR$/Accounting-System/main.css" />
+        <option value="$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js" />
         <option value="$PROJECT_DIR$/Accounting-System/controllers/expenses.js" />
+        <option value="$PROJECT_DIR$/Accounting-System/controllers/income.js" />
+        <option value="$PROJECT_DIR$/Accounting-System/accounting_system.js" />
       </list>
     </option>
   </component>
@@ -252,8 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,6 +233,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,12 +279,13 @@
       <workItem from="1507369267167" duration="16571000" />
       <workItem from="1507464740002" duration="13871000" />
       <workItem from="1507503155794" duration="509000" />
-      <workItem from="1507533616509" duration="3016000" />
+      <workItem from="1507533616509" duration="4177000" />
+      <workItem from="1507542508124" duration="840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77103000" />
+    <option name="totallyTimeSpent" value="79104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -334,12 +294,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14791666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -425,22 +385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1007">
           <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#continueToPartTwo#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitExpenseBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#updateExpenseInfoVizualisation#0;n#!!block;n#submitExpenseBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitSavings#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#checkAmountOfSalaryLeft#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#updateProgress#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#generateFooter#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="e#5800#6203#0" expanded="false" />
-            <element signature="e#6489#6798#0" expanded="false" />
-            <element signature="n#!!block;n#textInButtonHandler#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="e#7396#7657#0" expanded="false" />
-            <element signature="e#7680#7920#0" expanded="false" />
-            <element signature="e#7943#8173#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,13 +415,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/progress-bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/progress-bar.js" />
     <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/navbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -496,7 +434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,22 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!block;n#continueToPartTwo#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitExpenseBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#updateExpenseInfoVizualisation#0;n#!!block;n#submitExpenseBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitSavings#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#checkAmountOfSalaryLeft#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#updateProgress#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#generateFooter#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="e#5800#6203#0" expanded="false" />
-            <element signature="e#6489#6798#0" expanded="false" />
-            <element signature="n#!!block;n#textInButtonHandler#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="e#7396#7657#0" expanded="false" />
-            <element signature="e#7680#7920#0" expanded="false" />
-            <element signature="e#7943#8173#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,6 +559,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/progress-bar.js" />
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/form-controll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/Validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/ajax-provider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/topStatistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="121" column="35" lean-forward="false" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!block;n#createTopStatistics#0;n#!!block;n#execute#0;n#!!block;n#refreshTopStatisticsFunc#0;n#refreshTopStatisticsFunc#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#refreshTopStatistics#0;n#!!block;n#execute#0;n#!!block;n#refreshTopStatisticsFunc#0;n#refreshTopStatisticsFunc#0;n#!!top" expanded="false" />
+            <element signature="e#4233#4301#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/budget.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -646,83 +623,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/progress-bar.js">
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/currencyHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/accounting_system.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="65" column="42" lean-forward="false" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/form-controll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="38" column="55" lean-forward="false" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
           <folding>
-            <element signature="n#!!block;n#continueToPartTwo#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitExpenseBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#updateExpenseInfoVizualisation#0;n#!!block;n#submitExpenseBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitSavings#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#checkAmountOfSalaryLeft#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#updateProgress#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#submitBudget#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#generateFooter#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="e#5800#6203#0" expanded="false" />
-            <element signature="e#6489#6798#0" expanded="false" />
-            <element signature="n#!!block;n#textInButtonHandler#0;n#!!block;n#formControllerFunc#0;n#formControllerFunc#0;n#!!top" expanded="false" />
-            <element signature="e#7396#7657#0" expanded="false" />
-            <element signature="e#7680#7920#0" expanded="false" />
-            <element signature="e#7943#8173#0" expanded="false" />
+            <element signature="n#!!block;n#generateCurrencyChangeMenu#0;n#!!block;n#currencyHandlerFunc#0;n#currencyHandlerFunc#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/media.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Accounting-System/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="252" column="20" lean-forward="false" selection-start-line="252" selection-start-column="20" selection-end-line="252" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="578" column="56" lean-forward="false" selection-start-line="578" selection-start-column="56" selection-end-line="578" selection-end-column="56" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/Validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        <state relative-caret-position="4940">
+          <caret line="260" column="1" lean-forward="false" selection-start-line="260" selection-start-column="1" selection-end-line="260" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -749,83 +663,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/database.js">
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/sidepanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="285">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Accounting-System/container.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        <state relative-caret-position="209">
+          <caret line="11" column="66" lean-forward="true" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
           <folding>
             <marker date="1507538383410" expanded="true" signature="1141:1147" ph="{&quot;formController&quot;: formController...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/ajax-provider.js">
+    <entry file="file://$PROJECT_DIR$/Accounting-System/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/topStatistics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="121" column="35" lean-forward="false" selection-start-line="121" selection-start-column="35" selection-end-line="121" selection-end-column="35" />
+        <state relative-caret-position="290">
+          <caret line="548" column="76" lean-forward="true" selection-start-line="548" selection-start-column="76" selection-end-line="548" selection-end-column="76" />
           <folding>
-            <element signature="n#!!block;n#createTopStatistics#0;n#!!block;n#execute#0;n#!!block;n#refreshTopStatisticsFunc#0;n#refreshTopStatisticsFunc#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#refreshTopStatistics#0;n#!!block;n#execute#0;n#!!block;n#refreshTopStatisticsFunc#0;n#refreshTopStatisticsFunc#0;n#!!top" expanded="false" />
-            <element signature="e#4233#4301#0" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/sidepanel.js">
+    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/expenses-chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/navbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="-551">
+          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/expenses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="304">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/income.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounting-System/controllers/currencyHandler.js">
+    <entry file="file://$PROJECT_DIR$/Accounting-System/accounting_system.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-          <folding>
-            <element signature="n#!!block;n#generateCurrencyChangeMenu#0;n#!!block;n#currencyHandlerFunc#0;n#currencyHandlerFunc#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="309">
+          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

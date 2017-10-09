@@ -15,8 +15,6 @@ const expensesControllerFunc = function (database, modelFactory) {
             database.budget.moneySpent += expense.amount
             calculateBudget()
             changeProgressbarValues()
-            $('#subtractMoney').val('')
-            $('#subtractMoneyNote').val('')
         }
 
         $('#addExpense').hide(200)

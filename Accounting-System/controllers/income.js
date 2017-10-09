@@ -9,9 +9,6 @@ const incomeControllerFunc = function (database, modelFactory) {
         let income = modelFactory.createIncome(date, category, amount, note)
         database.incomes.push(income)
 
-
-        $('#addMoney').val('')
-        $('#addMoneyNote').val('')
         $('#addIncome').hide(200)
     }
 

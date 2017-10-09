@@ -43,15 +43,19 @@ $(function () {
 
     $('#submitExpense').click(function () {
         container.expensesController.submitExpense()
-        container.expenseChartLoad.drawChart(database)
+        container.expenseChartLoad.drawChart()
         container.refreshTopStatistics() //refresher
         container.historyTableLoad.addRow()
+        $('#subtractMoney').val('')
+        $('#subtractMoneyNote').val('')
     })
 
 
     $('#submitIncome').click(function () {
         container.incomeController.submitIncome()
         container.incomesBarChartLoad.drawChart(database)
+        $('#addMoney').val('')
+        $('#addMoneyNote').val('')
     })
 
     $("#addIncomeBtn").click(function () {

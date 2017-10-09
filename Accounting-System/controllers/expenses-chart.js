@@ -18,7 +18,7 @@ const expenseChartLoadFunc = function (database) {
 
     function drawChart() {
 
-        let category = $("input[name=optradio]:checked").val()
+        let category = $("#addExpense input[name=optradio]:checked").val()
         let amount = +$('#subtractMoney').val()
 
         switch (category) {
