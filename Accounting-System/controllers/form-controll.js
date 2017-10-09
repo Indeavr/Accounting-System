@@ -213,40 +213,43 @@ const formControllerFunc = function (database, modelFactory) {
         }
     });
 
-    let $setCategory = $('input:radio[name=knownExpenseCategory]');
-    if ($setCategory.is(":checked") === false) {
-        $setCategory.filter("[value=miscellaneous]").prop("checked", true);
-        $("#selectIncome-budget-label").text("default: Miscellaneous");
-    }
-
-    $setCategory.change(function () {
-        let categories = [
-            "Taxes", "Housing", "Food", "Automobile",
-            "Insurance", "Debt Repayment", "Entertainment", "Clothing",
-            "Savings", "Medical/Dental", "Miscellaneous", "School",
-            "Investments", "Childcare", "Other"];
-
-        let $btnLabel = $("#selectIncome-budget-label");
-        let $noteField = $("#otherExpenseCategory-budget");
-        for (let i = 0; i <= categories.length - 1; i++) {
-            if ($(this).attr("value") === categories[i].toLowerCase()) {
-                $btnLabel.text(categories[i]);
-                break;
-            } else if ($(this).attr("value") === "debt") {
-                $btnLabel.text(categories[5]);
-                break;
-            } else if ($(this).attr("value") === "medical") {
-                $btnLabel.text(categories[9]);
-                break;
+    function textInButtonHandler ($setCategory, $btnLabel, $otherField){
+        if ($setCategory.is(":checked") === false) {
+            $setCategory.filter("[value=Miscellaneous]").prop("checked", true);
+            $btnLabel.text("default: Miscellaneous");
+        }
+    
+        $setCategory.change(function () {
+            $btnLabel.text($(this).attr("value"));
+            
+            if ($(this).attr("value") === "Other") {
+                $otherField.prop("disabled", false);
+            } else {
+                $otherField.prop("disabled", true);
             }
-        }
+        });
+    }
+    
+    (function(){
+        let $setCategory = $('input:radio[name=knownExpenseCategory]');
+        let $btnLabel = $("#selectIncome-budget-label")
+        let $otherField = $("#otherExpenseCategory-budget")
+        textInButtonHandler($setCategory, $btnLabel, $otherField)
+    })();
+    
+    (function(){
+        let $setCategory = $('input:radio[name=income-category-item]');
+        let $btnLabel = $("#selectIncome")
+        let $otherField = $("#otherIncomeCategory")
+        textInButtonHandler($setCategory, $btnLabel, $otherField)
+    })();
 
-        if ($(this).attr("value") === "other") {
-            $noteField.prop("disabled", false);
-        } else {
-            $noteField.prop("disabled", true);
-        }
-    });
+    (function(){
+        let $setCategory = $('input:radio[name=optradio]');
+        let $btnLabel = $("#selectExpense")
+        let $otherField = $("#otherExpenseCategory")
+        textInButtonHandler($setCategory, $btnLabel, $otherField)
+    })();
 
     return {
         continueToPartTwo,
